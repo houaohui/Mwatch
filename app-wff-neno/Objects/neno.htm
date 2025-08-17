@@ -1,0 +1,234 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [.\Objects\neno.axf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image .\Objects\neno.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6130100: Last Updated: Sun Aug 17 10:59:54 2025
+<BR><P>
+<H3>Maximum Stack Usage =          0 bytes + Unknown(Untraceable Function Pointers)</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+
+<P>
+<H3>
+Function Pointers
+</H3><UL>
+ <LI><a href="#[0]">draw</a> from main.o(.text.draw) referenced from main.o(.text.my_main)
+</UL>
+<P>
+<H3>
+Global Symbols
+</H3>
+<P><STRONG><a name="[1]"></a>my_main</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, main.o(.text.my_main))
+<BR><BR>[Calls]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;open_watchface_general
+<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;openLSM6DSM
+<LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_setDrawFunc
+</UL>
+
+<P><STRONG><a name="[2]"></a>display_setDrawFunc</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_main
+</UL>
+
+<P><STRONG><a name="[4]"></a>openLSM6DSM</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_main
+</UL>
+
+<P><STRONG><a name="[3]"></a>open_watchface_general</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_main
+</UL>
+
+<P><STRONG><a name="[5]"></a>watchFace_switchUpdate</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[f]"></a>ticker</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[11]"></a>draw_point</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;myOLED_DrawLine_
+</UL>
+
+<P><STRONG><a name="[d]"></a>neno_draw</STRONG> (Thumb, 252 bytes, Stack size 0 bytes, main.o(.text.neno_draw))
+<BR><BR>[Calls]<UL><LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2iz
+<LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;myOLED_DrawLine_
+</UL>
+<BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[9]"></a>__aeabi_d2f</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, d2f.o(x$fpl$d2f))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[12]"></a>_d2f</STRONG> (Thumb, 98 bytes, Stack size 0 bytes, d2f.o(x$fpl$d2f), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fretinf
+<LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dnaninf
+</UL>
+
+<P><STRONG><a name="[8]"></a>__aeabi_dadd</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, daddsub_clz.o(x$fpl$dadd))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[15]"></a>_dadd</STRONG> (Thumb, 332 bytes, Stack size 0 bytes, daddsub_clz.o(x$fpl$dadd), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dretinf
+<LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dnaninf
+<LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dsub1
+</UL>
+
+<P><STRONG><a name="[7]"></a>__aeabi_dmul</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, dmul.o(x$fpl$dmul))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[18]"></a>_dmul</STRONG> (Thumb, 332 bytes, Stack size 0 bytes, dmul.o(x$fpl$dmul), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dretinf
+<LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dnaninf
+</UL>
+
+<P><STRONG><a name="[14]"></a>__fpl_dnaninf</STRONG> (Thumb, 156 bytes, Stack size 0 bytes, dnaninf.o(x$fpl$dnaninf), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dmul
+<LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dsub
+<LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dadd
+<LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_d2f
+</UL>
+
+<P><STRONG><a name="[17]"></a>__fpl_dretinf</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, dretinf.o(x$fpl$dretinf), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_f2d
+<LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dmul
+<LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dadd
+</UL>
+
+<P><STRONG><a name="[a]"></a>__aeabi_dsub</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, daddsub_clz.o(x$fpl$dsub))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[19]"></a>_dsub</STRONG> (Thumb, 464 bytes, Stack size 0 bytes, daddsub_clz.o(x$fpl$dsub), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dnaninf
+<LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dadd1
+</UL>
+
+<P><STRONG><a name="[6]"></a>__aeabi_f2d</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, f2d.o(x$fpl$f2d))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[1b]"></a>_f2d</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, f2d.o(x$fpl$f2d), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fnaninf
+<LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dretinf
+</UL>
+
+<P><STRONG><a name="[1d]"></a>_feq</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, fcmp.o(x$fpl$fcmp), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fcmpeq
+</UL>
+
+<P><STRONG><a name="[1f]"></a>_fneq</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, fcmp.o(x$fpl$fcmp), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fcmpeq
+</UL>
+
+<P><STRONG><a name="[b]"></a>__aeabi_fcmpgt</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, fcmp.o(x$fpl$fcmp))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[20]"></a>_fgr</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, fcmp.o(x$fpl$fcmp), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fcmpge
+</UL>
+
+<P><STRONG><a name="[c]"></a>__aeabi_fcmpge</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, fcmp.o(x$fpl$fcmp))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[22]"></a>_fgeq</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, fcmp.o(x$fpl$fcmp), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fcmpge
+</UL>
+
+<P><STRONG><a name="[23]"></a>_fleq</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, fcmp.o(x$fpl$fcmp), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fcmple
+</UL>
+
+<P><STRONG><a name="[25]"></a>_fls</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, fcmp.o(x$fpl$fcmp), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fcmple
+</UL>
+
+<P><STRONG><a name="[26]"></a>__fpl_fcmp_Inf</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, fcmpi.o(x$fpl$fcmpinf), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fcmple
+<LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fcmpge
+<LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fcmpeq
+</UL>
+
+<P><STRONG><a name="[1e]"></a>_fcmpeq</STRONG> (Thumb, 104 bytes, Stack size 0 bytes, feqf.o(x$fpl$feqf), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fcmp_Inf
+<LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fnaninf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fneq
+<LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_feq
+</UL>
+
+<P><STRONG><a name="[e]"></a>__aeabi_f2iz</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, ffix.o(x$fpl$ffix))
+<BR><BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;neno_draw
+<LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[27]"></a>_ffix</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, ffix.o(x$fpl$ffix), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fnaninf
+</UL>
+
+<P><STRONG><a name="[21]"></a>_fcmpge</STRONG> (Thumb, 104 bytes, Stack size 0 bytes, fgeqf.o(x$fpl$fgeqf), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fcmp_Inf
+<LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fnaninf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fgeq
+<LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fgr
+</UL>
+
+<P><STRONG><a name="[24]"></a>_fcmple</STRONG> (Thumb, 104 bytes, Stack size 0 bytes, fleqf.o(x$fpl$fleqf), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fcmp_Inf
+<LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fnaninf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fls
+<LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fleq
+</UL>
+
+<P><STRONG><a name="[1c]"></a>__fpl_fnaninf</STRONG> (Thumb, 140 bytes, Stack size 0 bytes, fnaninf.o(x$fpl$fnaninf), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fcmple
+<LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fcmpge
+<LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fcmpeq
+<LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ffix
+<LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_f2d
+</UL>
+
+<P><STRONG><a name="[13]"></a>__fpl_fretinf</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, fretinf.o(x$fpl$fretinf), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_d2f
+</UL>
+<P>
+<H3>
+Local Symbols
+</H3>
+<P><STRONG><a name="[0]"></a>draw</STRONG> (Thumb, 224 bytes, Stack size 0 bytes, main.o(.text.draw))
+<BR><BR>[Calls]<UL><LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2iz
+<LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpge
+<LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
+<LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
+<LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
+<LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
+<LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;watchFace_switchUpdate
+<LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ticker
+<LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;neno_draw
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> main.o(.text.my_main)
+</UL>
+<P><STRONG><a name="[10]"></a>myOLED_DrawLine_</STRONG> (Thumb, 158 bytes, Stack size 0 bytes, main.o(.text.myOLED_DrawLine_))
+<BR><BR>[Calls]<UL><LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_point
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;neno_draw
+</UL>
+
+<P><STRONG><a name="[1a]"></a>_dadd1</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, daddsub_clz.o(x$fpl$dadd), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dsub
+</UL>
+
+<P><STRONG><a name="[16]"></a>_dsub1</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, daddsub_clz.o(x$fpl$dsub), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dadd
+</UL>
+<P>
+<H3>
+Undefined Global Symbols
+</H3><HR></body></html>

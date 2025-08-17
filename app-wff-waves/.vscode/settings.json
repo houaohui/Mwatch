@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.md": "markdown",
+        "watchface_api.h": "c"
+    }
+}

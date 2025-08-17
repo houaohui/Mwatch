@@ -1,0 +1,1028 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         
+    2 00000000                 AREA             |.text|, CODE, READONLY, ALIGN=
+2
+    3 00000000                 THUMB
+    4 00000000                 REQUIRE8
+    5 00000000                 PRESERVE8
+    6 00000000         
+    7 00000000         ; api函数表在地址
+    8 00000000 2000BFFC 
+                       table_ptr
+                               EQU              (0x2000C000 - 4) 
+                                                            ; API表基地址
+    9 00000000         
+   10 00000000                 MACRO
+   11 00000000                 api_item         $name_, $index_, $type_
+   12 00000000                 EXPORT           $name_
+   13 00000000         $name_  PROC
+   14 00000000                 LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 00000000                 LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 00000000         
+   17 00000000                 IF               "$type_" == "FUNC"
+   18 00000000         ; 函数处理：跳转到目标函数
+   19 00000000                 LDR              r12, [r12, #4*$index_]
+   20 00000000                 BX               r12
+   21 00000000                 ELSE
+   22 00000000         ; 变量处理：返回变量指针
+   23 00000000                 LDR              r0, [r12, #4*$index_] ; 直接�
+                                                            ��载变量指针�
+                                                            �
+   24 00000000                 BX               lr
+   25 00000000                 ENDIF
+   26 00000000                 ENDP
+   27 00000000                 MEND
+   28 00000000         
+   29 00000000         
+   30 00000000         ; 定义系统api函数/变量
+   31 00000000         ; 操作系统内核相关api
+   32 00000000                 api_item         alarm_getNext,1,FUNC ;
+   12 00000000                 EXPORT           alarm_getNext
+   13 00000000         alarm_getNext
+                               PROC
+   14 00000000 F8DF C1CC       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 00000004 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 00000008         
+   17 00000008                 IF               "FUNC" == "FUNC"
+   18 00000008         ; 函数处理：跳转到目标函数
+   19 00000008 F8DC C004       LDR              r12, [r12, #4*1]
+   20 0000000C 4760            BX               r12
+   21 0000000E                 ELSE
+   25                          ENDIF
+   26 0000000E                 ENDP
+   33 0000000E                 api_item         alarm_getNextDay,2,FUNC ;
+   12 0000000E                 EXPORT           alarm_getNextDay
+   13 0000000E         alarm_getNextDay
+                               PROC
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   14 0000000E F8DF C1C0       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 00000012 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 00000016         
+   17 00000016                 IF               "FUNC" == "FUNC"
+   18 00000016         ; 函数处理：跳转到目标函数
+   19 00000016 F8DC C008       LDR              r12, [r12, #4*2]
+   20 0000001A 4760            BX               r12
+   21 0000001C                 ELSE
+   25                          ENDIF
+   26 0000001C                 ENDP
+   34 0000001C                 api_item         appConfig_sysVar,3,VAR ;
+   12 0000001C                 EXPORT           appConfig_sysVar
+   13 0000001C         appConfig_sysVar
+                               PROC
+   14 0000001C F8DF C1B0       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 00000020 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 00000024         
+   17 00000024                 IF               "VAR" == "FUNC"
+   22 00000024         ; 变量处理：返回变量指针
+   23 00000024 F8DC 000C       LDR              r0, [r12, #4*3] ; 直接加载�
+                                                            ��量指针值
+   24 00000028 4770            BX               lr
+   25 0000002A                 ENDIF
+   26 0000002A                 ENDP
+   35 0000002A                 api_item         colon_sysVar,4,VAR ;
+   12 0000002A                 EXPORT           colon_sysVar
+   13 0000002A         colon_sysVar
+                               PROC
+   14 0000002A F8DF C1A4       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 0000002E F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 00000032         
+   17 00000032                 IF               "VAR" == "FUNC"
+   22 00000032         ; 变量处理：返回变量指针
+   23 00000032 F8DC 0010       LDR              r0, [r12, #4*4] ; 直接加载�
+                                                            ��量指针值
+   24 00000036 4770            BX               lr
+   25 00000038                 ENDIF
+   26 00000038                 ENDP
+   36 00000038                 api_item         display_setDrawFunc,5,FUNC ;
+   12 00000038                 EXPORT           display_setDrawFunc
+   13 00000038         display_setDrawFunc
+                               PROC
+   14 00000038 F8DF C194       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 0000003C F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 00000040         
+   17 00000040                 IF               "FUNC" == "FUNC"
+   18 00000040         ; 函数处理：跳转到目标函数
+   19 00000040 F8DC C014       LDR              r12, [r12, #4*5]
+   20 00000044 4760            BX               r12
+   21 00000046                 ELSE
+   25                          ENDIF
+
+
+
+ARM Macro Assembler    Page 3 
+
+
+   26 00000046                 ENDP
+   37 00000046                 api_item         div10,6,FUNC ;
+   12 00000046                 EXPORT           div10
+   13 00000046         div10   PROC
+   14 00000046 F8DF C188       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 0000004A F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 0000004E         
+   17 0000004E                 IF               "FUNC" == "FUNC"
+   18 0000004E         ; 函数处理：跳转到目标函数
+   19 0000004E F8DC C018       LDR              r12, [r12, #4*6]
+   20 00000052 4760            BX               r12
+   21 00000054                 ELSE
+   25                          ENDIF
+   26 00000054                 ENDP
+   38 00000054                 api_item         dowImg_sysVar,7,VAR ;
+   12 00000054                 EXPORT           dowImg_sysVar
+   13 00000054         dowImg_sysVar
+                               PROC
+   14 00000054 F8DF C178       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 00000058 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 0000005C         
+   17 0000005C                 IF               "VAR" == "FUNC"
+   22 0000005C         ; 变量处理：返回变量指针
+   23 0000005C F8DC 001C       LDR              r0, [r12, #4*7] ; 直接加载�
+                                                            ��量指针值
+   24 00000060 4770            BX               lr
+   25 00000062                 ENDIF
+   26 00000062                 ENDP
+   39 00000062                 api_item         drawBattery,8,FUNC ;
+   12 00000062                 EXPORT           drawBattery
+   13 00000062         drawBattery
+                               PROC
+   14 00000062 F8DF C16C       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 00000066 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 0000006A         
+   17 0000006A                 IF               "FUNC" == "FUNC"
+   18 0000006A         ; 函数处理：跳转到目标函数
+   19 0000006A F8DC C020       LDR              r12, [r12, #4*8]
+   20 0000006E 4760            BX               r12
+   21 00000070                 ELSE
+   25                          ENDIF
+   26 00000070                 ENDP
+   40 00000070                 api_item         drawDate,9,FUNC ;
+   12 00000070                 EXPORT           drawDate
+   13 00000070         drawDate
+                               PROC
+   14 00000070 F8DF C15C       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 00000074 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 00000078         
+   17 00000078                 IF               "FUNC" == "FUNC"
+   18 00000078         ; 函数处理：跳转到目标函数
+
+
+
+ARM Macro Assembler    Page 4 
+
+
+   19 00000078 F8DC C024       LDR              r12, [r12, #4*9]
+   20 0000007C 4760            BX               r12
+   21 0000007E                 ELSE
+   25                          ENDIF
+   26 0000007E                 ENDP
+   41 0000007E                 api_item         drawTemperature,10,FUNC ;
+   12 0000007E                 EXPORT           drawTemperature
+   13 0000007E         drawTemperature
+                               PROC
+   14 0000007E F8DF C150       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 00000082 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 00000086         
+   17 00000086                 IF               "FUNC" == "FUNC"
+   18 00000086         ; 函数处理：跳转到目标函数
+   19 00000086 F8DC C028       LDR              r12, [r12, #4*10]
+   20 0000008A 4760            BX               r12
+   21 0000008C                 ELSE
+   25                          ENDIF
+   26 0000008C                 ENDP
+   42 0000008C                 api_item         draw_bitmap,11,FUNC ;
+   12 0000008C                 EXPORT           draw_bitmap
+   13 0000008C         draw_bitmap
+                               PROC
+   14 0000008C F8DF C140       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 00000090 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 00000094         
+   17 00000094                 IF               "FUNC" == "FUNC"
+   18 00000094         ; 函数处理：跳转到目标函数
+   19 00000094 F8DC C02C       LDR              r12, [r12, #4*11]
+   20 00000098 4760            BX               r12
+   21 0000009A                 ELSE
+   25                          ENDIF
+   26 0000009A                 ENDP
+   43 0000009A                 api_item         draw_string,12,FUNC ;
+   12 0000009A                 EXPORT           draw_string
+   13 0000009A         draw_string
+                               PROC
+   14 0000009A F8DF C134       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 0000009E F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 000000A2         
+   17 000000A2                 IF               "FUNC" == "FUNC"
+   18 000000A2         ; 函数处理：跳转到目标函数
+   19 000000A2 F8DC C030       LDR              r12, [r12, #4*12]
+   20 000000A6 4760            BX               r12
+   21 000000A8                 ELSE
+   25                          ENDIF
+   26 000000A8                 ENDP
+   44 000000A8                 api_item         millis_get,13,FUNC ;
+   12 000000A8                 EXPORT           millis_get
+   13 000000A8         millis_get
+                               PROC
+   14 000000A8 F8DF C124       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+
+
+
+ARM Macro Assembler    Page 5 
+
+
+   15 000000AC F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 000000B0         
+   17 000000B0                 IF               "FUNC" == "FUNC"
+   18 000000B0         ; 函数处理：跳转到目标函数
+   19 000000B0 F8DC C034       LDR              r12, [r12, #4*13]
+   20 000000B4 4760            BX               r12
+   21 000000B6                 ELSE
+   25                          ENDIF
+   26 000000B6                 ENDP
+   45 000000B6                 api_item         mod10,14,FUNC ;
+   12 000000B6                 EXPORT           mod10
+   13 000000B6         mod10   PROC
+   14 000000B6 F8DF C118       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 000000BA F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 000000BE         
+   17 000000BE                 IF               "FUNC" == "FUNC"
+   18 000000BE         ; 函数处理：跳转到目标函数
+   19 000000BE F8DC C038       LDR              r12, [r12, #4*14]
+   20 000000C2 4760            BX               r12
+   21 000000C4                 ELSE
+   25                          ENDIF
+   26 000000C4                 ENDP
+   46 000000C4                 api_item         openLSM6DSM,15,FUNC ;
+   12 000000C4                 EXPORT           openLSM6DSM
+   13 000000C4         openLSM6DSM
+                               PROC
+   14 000000C4 F8DF C108       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 000000C8 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 000000CC         
+   17 000000CC                 IF               "FUNC" == "FUNC"
+   18 000000CC         ; 函数处理：跳转到目标函数
+   19 000000CC F8DC C03C       LDR              r12, [r12, #4*15]
+   20 000000D0 4760            BX               r12
+   21 000000D2                 ELSE
+   25                          ENDIF
+   26 000000D2                 ENDP
+   47 000000D2                 api_item         open_watchface_general,16,FUNC 
+                                                            ;
+   12 000000D2                 EXPORT           open_watchface_general
+   13 000000D2         open_watchface_general
+                               PROC
+   14 000000D2 F8DF C0FC       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 000000D6 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 000000DA         
+   17 000000DA                 IF               "FUNC" == "FUNC"
+   18 000000DA         ; 函数处理：跳转到目标函数
+   19 000000DA F8DC C040       LDR              r12, [r12, #4*16]
+   20 000000DE 4760            BX               r12
+   21 000000E0                 ELSE
+   25                          ENDIF
+   26 000000E0                 ENDP
+   48 000000E0                 api_item         stopwatch_sysVar,17,VAR ;
+
+
+
+ARM Macro Assembler    Page 6 
+
+
+   12 000000E0                 EXPORT           stopwatch_sysVar
+   13 000000E0         stopwatch_sysVar
+                               PROC
+   14 000000E0 F8DF C0EC       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 000000E4 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 000000E8         
+   17 000000E8                 IF               "VAR" == "FUNC"
+   22 000000E8         ; 变量处理：返回变量指针
+   23 000000E8 F8DC 0044       LDR              r0, [r12, #4*17] ; 直接加载
+                                                            变量指针值
+   24 000000EC 4770            BX               lr
+   25 000000EE                 ENDIF
+   26 000000EE                 ENDP
+   49 000000EE                 api_item         stopwatch_active,18,FUNC ;
+   12 000000EE                 EXPORT           stopwatch_active
+   13 000000EE         stopwatch_active
+                               PROC
+   14 000000EE F8DF C0E0       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 000000F2 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 000000F6         
+   17 000000F6                 IF               "FUNC" == "FUNC"
+   18 000000F6         ; 函数处理：跳转到目标函数
+   19 000000F6 F8DC C048       LDR              r12, [r12, #4*18]
+   20 000000FA 4760            BX               r12
+   21 000000FC                 ELSE
+   25                          ENDIF
+   26 000000FC                 ENDP
+   50 000000FC                 api_item         timeDate_sysVar,19,VAR ;
+   12 000000FC                 EXPORT           timeDate_sysVar
+   13 000000FC         timeDate_sysVar
+                               PROC
+   14 000000FC F8DF C0D0       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 00000100 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 00000104         
+   17 00000104                 IF               "VAR" == "FUNC"
+   22 00000104         ; 变量处理：返回变量指针
+   23 00000104 F8DC 004C       LDR              r0, [r12, #4*19] ; 直接加载
+                                                            变量指针值
+   24 00000108 4770            BX               lr
+   25 0000010A                 ENDIF
+   26 0000010A                 ENDP
+   51 0000010A                 api_item         time_timeMode,20,FUNC ;
+   12 0000010A                 EXPORT           time_timeMode
+   13 0000010A         time_timeMode
+                               PROC
+   14 0000010A F8DF C0C4       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 0000010E F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 00000112         
+   17 00000112                 IF               "FUNC" == "FUNC"
+   18 00000112         ; 函数处理：跳转到目标函数
+   19 00000112 F8DC C050       LDR              r12, [r12, #4*20]
+
+
+
+ARM Macro Assembler    Page 7 
+
+
+   20 00000116 4760            BX               r12
+   21 00000118                 ELSE
+   25                          ENDIF
+   26 00000118                 ENDP
+   52 00000118                 api_item         watchFace_switchUpdate,21,FUNC 
+                                                            ;
+   12 00000118                 EXPORT           watchFace_switchUpdate
+   13 00000118         watchFace_switchUpdate
+                               PROC
+   14 00000118 F8DF C0B4       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 0000011C F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 00000120         
+   17 00000120                 IF               "FUNC" == "FUNC"
+   18 00000120         ; 函数处理：跳转到目标函数
+   19 00000120 F8DC C054       LDR              r12, [r12, #4*21]
+   20 00000124 4760            BX               r12
+   21 00000126                 ELSE
+   25                          ENDIF
+   26 00000126                 ENDP
+   53 00000126                 api_item         console_log,22,FUNC ;
+   12 00000126                 EXPORT           console_log
+   13 00000126         console_log
+                               PROC
+   14 00000126 F8DF C0A8       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 0000012A F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 0000012E         
+   17 0000012E                 IF               "FUNC" == "FUNC"
+   18 0000012E         ; 函数处理：跳转到目标函数
+   19 0000012E F8DC C058       LDR              r12, [r12, #4*22]
+   20 00000132 4760            BX               r12
+   21 00000134                 ELSE
+   25                          ENDIF
+   26 00000134                 ENDP
+   54 00000134                 api_item         drawVectorChar,23,FUNC ;
+   12 00000134                 EXPORT           drawVectorChar
+   13 00000134         drawVectorChar
+                               PROC
+   14 00000134 F8DF C098       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 00000138 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 0000013C         
+   17 0000013C                 IF               "FUNC" == "FUNC"
+   18 0000013C         ; 函数处理：跳转到目标函数
+   19 0000013C F8DC C05C       LDR              r12, [r12, #4*23]
+   20 00000140 4760            BX               r12
+   21 00000142                 ELSE
+   25                          ENDIF
+   26 00000142                 ENDP
+   55 00000142                 api_item         setVectorDrawClipWin,24,FUNC ;
+   12 00000142                 EXPORT           setVectorDrawClipWin
+   13 00000142         setVectorDrawClipWin
+                               PROC
+   14 00000142 F8DF C08C       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+
+
+
+ARM Macro Assembler    Page 8 
+
+
+   15 00000146 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 0000014A         
+   17 0000014A                 IF               "FUNC" == "FUNC"
+   18 0000014A         ; 函数处理：跳转到目标函数
+   19 0000014A F8DC C060       LDR              r12, [r12, #4*24]
+   20 0000014E 4760            BX               r12
+   21 00000150                 ELSE
+   25                          ENDIF
+   26 00000150                 ENDP
+   56 00000150                 api_item         getBtLinkState,25,FUNC ;
+   12 00000150                 EXPORT           getBtLinkState
+   13 00000150         getBtLinkState
+                               PROC
+   14 00000150 F8DF C07C       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 00000154 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 00000158         
+   17 00000158                 IF               "FUNC" == "FUNC"
+   18 00000158         ; 函数处理：跳转到目标函数
+   19 00000158 F8DC C064       LDR              r12, [r12, #4*25]
+   20 0000015C 4760            BX               r12
+   21 0000015E                 ELSE
+   25                          ENDIF
+   26 0000015E                 ENDP
+   57 0000015E                 api_item         getCharingState,26,FUNC ;
+   12 0000015E                 EXPORT           getCharingState
+   13 0000015E         getCharingState
+                               PROC
+   14 0000015E F8DF C070       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 00000162 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 00000166         
+   17 00000166                 IF               "FUNC" == "FUNC"
+   18 00000166         ; 函数处理：跳转到目标函数
+   19 00000166 F8DC C068       LDR              r12, [r12, #4*26]
+   20 0000016A 4760            BX               r12
+   21 0000016C                 ELSE
+   25                          ENDIF
+   26 0000016C                 ENDP
+   58 0000016C                 api_item         blueToothIcon_sysVar,27,VAR ;
+   12 0000016C                 EXPORT           blueToothIcon_sysVar
+   13 0000016C         blueToothIcon_sysVar
+                               PROC
+   14 0000016C F8DF C060       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 00000170 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 00000174         
+   17 00000174                 IF               "VAR" == "FUNC"
+   22 00000174         ; 变量处理：返回变量指针
+   23 00000174 F8DC 006C       LDR              r0, [r12, #4*27] ; 直接加载
+                                                            变量指针值
+   24 00000178 4770            BX               lr
+   25 0000017A                 ENDIF
+   26 0000017A                 ENDP
+   59 0000017A                 api_item         chargeIcon_sysVar,28,VAR ;
+
+
+
+ARM Macro Assembler    Page 9 
+
+
+   12 0000017A                 EXPORT           chargeIcon_sysVar
+   13 0000017A         chargeIcon_sysVar
+                               PROC
+   14 0000017A F8DF C054       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 0000017E F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 00000182         
+   17 00000182                 IF               "VAR" == "FUNC"
+   22 00000182         ; 变量处理：返回变量指针
+   23 00000182 F8DC 0070       LDR              r0, [r12, #4*28] ; 直接加载
+                                                            变量指针值
+   24 00000186 4770            BX               lr
+   25 00000188                 ENDIF
+   26 00000188                 ENDP
+   60 00000188                 api_item         myOLED_DrawLine,29,FUNC ;
+   12 00000188                 EXPORT           myOLED_DrawLine
+   13 00000188         myOLED_DrawLine
+                               PROC
+   14 00000188 F8DF C044       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 0000018C F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 00000190         
+   17 00000190                 IF               "FUNC" == "FUNC"
+   18 00000190         ; 函数处理：跳转到目标函数
+   19 00000190 F8DC C074       LDR              r12, [r12, #4*29]
+   20 00000194 4760            BX               r12
+   21 00000196                 ELSE
+   25                          ENDIF
+   26 00000196                 ENDP
+   61 00000196                 api_item         smallFont_sysVar,30,VAR ;
+   12 00000196                 EXPORT           smallFont_sysVar
+   13 00000196         smallFont_sysVar
+                               PROC
+   14 00000196 F8DF C038       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 0000019A F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 0000019E         
+   17 0000019E                 IF               "VAR" == "FUNC"
+   22 0000019E         ; 变量处理：返回变量指针
+   23 0000019E F8DC 0078       LDR              r0, [r12, #4*30] ; 直接加载
+                                                            变量指针值
+   24 000001A2 4770            BX               lr
+   25 000001A4                 ENDIF
+   26 000001A4                 ENDP
+   62 000001A4                 api_item         ticker,31,FUNC ;
+   12 000001A4                 EXPORT           ticker
+   13 000001A4         ticker  PROC
+   14 000001A4 F8DF C028       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 000001A8 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 000001AC         
+   17 000001AC                 IF               "FUNC" == "FUNC"
+   18 000001AC         ; 函数处理：跳转到目标函数
+   19 000001AC F8DC C07C       LDR              r12, [r12, #4*31]
+   20 000001B0 4760            BX               r12
+
+
+
+ARM Macro Assembler    Page 10 
+
+
+   21 000001B2                 ELSE
+   25                          ENDIF
+   26 000001B2                 ENDP
+   63 000001B2                 api_item         draw_point,32,FUNC ;
+   12 000001B2                 EXPORT           draw_point
+   13 000001B2         draw_point
+                               PROC
+   14 000001B2 F8DF C01C       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 000001B6 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 000001BA         
+   17 000001BA                 IF               "FUNC" == "FUNC"
+   18 000001BA         ; 函数处理：跳转到目标函数
+   19 000001BA F8DC C080       LDR              r12, [r12, #4*32]
+   20 000001BE 4760            BX               r12
+   21 000001C0                 ELSE
+   25                          ENDIF
+   26 000001C0                 ENDP
+   64 000001C0                 api_item         drawCude3D,33,FUNC ;
+   12 000001C0                 EXPORT           drawCude3D
+   13 000001C0         drawCude3D
+                               PROC
+   14 000001C0 F8DF C00C       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 000001C4 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
+   16 000001C8         
+   17 000001C8                 IF               "FUNC" == "FUNC"
+   18 000001C8         ; 函数处理：跳转到目标函数
+   19 000001C8 F8DC C084       LDR              r12, [r12, #4*33]
+   20 000001CC 4760            BX               r12
+   21 000001CE                 ELSE
+   25                          ENDIF
+   26 000001CE                 ENDP
+   65 000001CE         ; ...省略其它api定义...
+   66 000001CE         
+   67 000001CE 00 00           ALIGN            4
+   68 000001D0                 END
+              2000BFFC 
+Command Line: --xref --diag_suppress=9931 --cpu=Cortex-M4 --fpu=SoftVFP --depen
+d=.\objects\api_table.d -o.\objects\api_table.o -I.\RTE\_Target_1 -IC:\Keil_v5\
+MDK\ARM\Packs\Keil\STM32L4xx_DFP\2.6.1\Drivers\CMSIS\Device\ST\STM32L4xx\Includ
+e -IC:\Keil_v5\MDK\ARM\CMSIS\Include --predefine="__UVISION_VERSION SETA 529" -
+-predefine="STM32L431xx SETA 1" --list=.\listings\api_table.lst api_table.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 2 in file api_table.s
+   Uses
+      None
+Comment: .text unused
+alarm_getNext 00000000
+
+Symbol: alarm_getNext
+   Definitions
+      At line 13 in macro api_item
+      at line 32 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 32 in file api_table.s
+Comment: alarm_getNext used once
+alarm_getNextDay 0000000E
+
+Symbol: alarm_getNextDay
+   Definitions
+      At line 13 in macro api_item
+      at line 33 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 33 in file api_table.s
+Comment: alarm_getNextDay used once
+appConfig_sysVar 0000001C
+
+Symbol: appConfig_sysVar
+   Definitions
+      At line 13 in macro api_item
+      at line 34 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 34 in file api_table.s
+Comment: appConfig_sysVar used once
+blueToothIcon_sysVar 0000016C
+
+Symbol: blueToothIcon_sysVar
+   Definitions
+      At line 13 in macro api_item
+      at line 58 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 58 in file api_table.s
+Comment: blueToothIcon_sysVar used once
+chargeIcon_sysVar 0000017A
+
+Symbol: chargeIcon_sysVar
+   Definitions
+      At line 13 in macro api_item
+      at line 59 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 59 in file api_table.s
+Comment: chargeIcon_sysVar used once
+colon_sysVar 0000002A
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+Relocatable symbols
+
+
+Symbol: colon_sysVar
+   Definitions
+      At line 13 in macro api_item
+      at line 35 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 35 in file api_table.s
+Comment: colon_sysVar used once
+console_log 00000126
+
+Symbol: console_log
+   Definitions
+      At line 13 in macro api_item
+      at line 53 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 53 in file api_table.s
+Comment: console_log used once
+display_setDrawFunc 00000038
+
+Symbol: display_setDrawFunc
+   Definitions
+      At line 13 in macro api_item
+      at line 36 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 36 in file api_table.s
+Comment: display_setDrawFunc used once
+div10 00000046
+
+Symbol: div10
+   Definitions
+      At line 13 in macro api_item
+      at line 37 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 37 in file api_table.s
+Comment: div10 used once
+dowImg_sysVar 00000054
+
+Symbol: dowImg_sysVar
+   Definitions
+      At line 13 in macro api_item
+      at line 38 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 38 in file api_table.s
+Comment: dowImg_sysVar used once
+drawBattery 00000062
+
+Symbol: drawBattery
+   Definitions
+      At line 13 in macro api_item
+      at line 39 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 39 in file api_table.s
+Comment: drawBattery used once
+
+
+
+ARM Macro Assembler    Page 3 Alphabetic symbol ordering
+Relocatable symbols
+
+drawCude3D 000001C0
+
+Symbol: drawCude3D
+   Definitions
+      At line 13 in macro api_item
+      at line 64 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 64 in file api_table.s
+Comment: drawCude3D used once
+drawDate 00000070
+
+Symbol: drawDate
+   Definitions
+      At line 13 in macro api_item
+      at line 40 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 40 in file api_table.s
+Comment: drawDate used once
+drawTemperature 0000007E
+
+Symbol: drawTemperature
+   Definitions
+      At line 13 in macro api_item
+      at line 41 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 41 in file api_table.s
+Comment: drawTemperature used once
+drawVectorChar 00000134
+
+Symbol: drawVectorChar
+   Definitions
+      At line 13 in macro api_item
+      at line 54 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 54 in file api_table.s
+Comment: drawVectorChar used once
+draw_bitmap 0000008C
+
+Symbol: draw_bitmap
+   Definitions
+      At line 13 in macro api_item
+      at line 42 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 42 in file api_table.s
+Comment: draw_bitmap used once
+draw_point 000001B2
+
+Symbol: draw_point
+   Definitions
+      At line 13 in macro api_item
+      at line 63 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 63 in file api_table.s
+
+
+
+ARM Macro Assembler    Page 4 Alphabetic symbol ordering
+Relocatable symbols
+
+Comment: draw_point used once
+draw_string 0000009A
+
+Symbol: draw_string
+   Definitions
+      At line 13 in macro api_item
+      at line 43 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 43 in file api_table.s
+Comment: draw_string used once
+getBtLinkState 00000150
+
+Symbol: getBtLinkState
+   Definitions
+      At line 13 in macro api_item
+      at line 56 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 56 in file api_table.s
+Comment: getBtLinkState used once
+getCharingState 0000015E
+
+Symbol: getCharingState
+   Definitions
+      At line 13 in macro api_item
+      at line 57 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 57 in file api_table.s
+Comment: getCharingState used once
+millis_get 000000A8
+
+Symbol: millis_get
+   Definitions
+      At line 13 in macro api_item
+      at line 44 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 44 in file api_table.s
+Comment: millis_get used once
+mod10 000000B6
+
+Symbol: mod10
+   Definitions
+      At line 13 in macro api_item
+      at line 45 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 45 in file api_table.s
+Comment: mod10 used once
+myOLED_DrawLine 00000188
+
+Symbol: myOLED_DrawLine
+   Definitions
+      At line 13 in macro api_item
+      at line 60 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+
+
+
+ARM Macro Assembler    Page 5 Alphabetic symbol ordering
+Relocatable symbols
+
+      at line 60 in file api_table.s
+Comment: myOLED_DrawLine used once
+openLSM6DSM 000000C4
+
+Symbol: openLSM6DSM
+   Definitions
+      At line 13 in macro api_item
+      at line 46 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 46 in file api_table.s
+Comment: openLSM6DSM used once
+open_watchface_general 000000D2
+
+Symbol: open_watchface_general
+   Definitions
+      At line 13 in macro api_item
+      at line 47 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 47 in file api_table.s
+Comment: open_watchface_general used once
+setVectorDrawClipWin 00000142
+
+Symbol: setVectorDrawClipWin
+   Definitions
+      At line 13 in macro api_item
+      at line 55 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 55 in file api_table.s
+Comment: setVectorDrawClipWin used once
+smallFont_sysVar 00000196
+
+Symbol: smallFont_sysVar
+   Definitions
+      At line 13 in macro api_item
+      at line 61 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 61 in file api_table.s
+Comment: smallFont_sysVar used once
+stopwatch_active 000000EE
+
+Symbol: stopwatch_active
+   Definitions
+      At line 13 in macro api_item
+      at line 49 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 49 in file api_table.s
+Comment: stopwatch_active used once
+stopwatch_sysVar 000000E0
+
+Symbol: stopwatch_sysVar
+   Definitions
+      At line 13 in macro api_item
+      at line 48 in file api_table.s
+   Uses
+
+
+
+ARM Macro Assembler    Page 6 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 12 in macro api_item
+      at line 48 in file api_table.s
+Comment: stopwatch_sysVar used once
+ticker 000001A4
+
+Symbol: ticker
+   Definitions
+      At line 13 in macro api_item
+      at line 62 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 62 in file api_table.s
+Comment: ticker used once
+timeDate_sysVar 000000FC
+
+Symbol: timeDate_sysVar
+   Definitions
+      At line 13 in macro api_item
+      at line 50 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 50 in file api_table.s
+Comment: timeDate_sysVar used once
+time_timeMode 0000010A
+
+Symbol: time_timeMode
+   Definitions
+      At line 13 in macro api_item
+      at line 51 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 51 in file api_table.s
+Comment: time_timeMode used once
+watchFace_switchUpdate 00000118
+
+Symbol: watchFace_switchUpdate
+   Definitions
+      At line 13 in macro api_item
+      at line 52 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 52 in file api_table.s
+Comment: watchFace_switchUpdate used once
+34 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+table_ptr 2000BFFC
+
+Symbol: table_ptr
+   Definitions
+      At line 8 in file api_table.s
+   Uses
+      At line 14 in macro api_item
+      at line 32 in file api_table.s
+Comment: table_ptr used once
+1 symbol
+369 symbols in table

@@ -1,0 +1,29 @@
+Dependencies for Project 'wff-waves', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 6130001::V6.13.1::.\ARMCLANG
+F (.\main.c)(0x68A13795)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Target_1-IC:/Keil_v5/MDK/ARM/Packs/Keil/STM32L4xx_DFP/2.6.1/Drivers/CMSIS/Device/ST/STM32L4xx/Include-IC:/Keil_v5/MDK/ARM/CMSIS/Include-D__UVISION_VERSION="529" -DSTM32L431xx-o ./objects/main.o -MD)
+I (watchface_api.h)(0x68A134A3)
+I (C:\Keil_v5\MDK\ARM\ARMCLANG\include\stdlib.h)(0x5DB34DA0)
+I (C:\Keil_v5\MDK\ARM\ARMCLANG\include\string.h)(0x5DB34DA0)
+I (C:\Keil_v5\MDK\ARM\ARMCLANG\include\stdio.h)(0x5DB34DA0)
+I (C:\Keil_v5\MDK\ARM\ARMCLANG\include\math.h)(0x5DB34DA0)
+I (config.h)(0x68974B10)
+I (typedefs.h)(0x6892063B)
+I (C:\Keil_v5\MDK\ARM\ARMCLANG\include\stdbool.h)(0x5DB34DA0)
+I (C:\Keil_v5\MDK\ARM\ARMCLANG\include\stdint.h)(0x5DB34DA0)
+I (util.h)(0x6832F8BA)
+I (english.h)(0x685E42DF)
+I (resources.h)(0x68A0894D)
+F (.\api_table.s)(0x68A1347B)(--cpu Cortex-M4 --fpu=SoftVFP-I.\RTE\_Target_1-IC:\Keil_v5\MDK\ARM\Packs\Keil\STM32L4xx_DFP\2.6.1\Drivers\CMSIS\Device\ST\STM32L4xx\Include-IC:\Keil_v5\MDK\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 529"--pd "STM32L431xx SETA 1"--list .\listings\api_table.lst--xref -o .\objects\api_table.o--depend .\objects\api_table.d)
+F (.\watchface_api.c)(0x68A09280)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Target_1-IC:/Keil_v5/MDK/ARM/Packs/Keil/STM32L4xx_DFP/2.6.1/Drivers/CMSIS/Device/ST/STM32L4xx/Include-IC:/Keil_v5/MDK/ARM/CMSIS/Include-D__UVISION_VERSION="529" -DSTM32L431xx-o ./objects/watchface_api.o -MD)
+I (watchface_api.h)(0x68A134A3)
+I (C:\Keil_v5\MDK\ARM\ARMCLANG\include\stdlib.h)(0x5DB34DA0)
+I (C:\Keil_v5\MDK\ARM\ARMCLANG\include\string.h)(0x5DB34DA0)
+I (C:\Keil_v5\MDK\ARM\ARMCLANG\include\stdio.h)(0x5DB34DA0)
+I (C:\Keil_v5\MDK\ARM\ARMCLANG\include\math.h)(0x5DB34DA0)
+I (config.h)(0x68974B10)
+I (typedefs.h)(0x6892063B)
+I (C:\Keil_v5\MDK\ARM\ARMCLANG\include\stdbool.h)(0x5DB34DA0)
+I (C:\Keil_v5\MDK\ARM\ARMCLANG\include\stdint.h)(0x5DB34DA0)
+I (util.h)(0x6832F8BA)
+I (english.h)(0x685E42DF)
+I (resources.h)(0x68A0894D)

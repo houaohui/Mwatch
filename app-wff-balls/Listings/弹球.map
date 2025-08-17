@@ -1,0 +1,233 @@
+Component: ARM Compiler 6.13.1 Tool: armlink [5d895400]
+
+==============================================================================
+
+Section Cross References
+
+    main.o(.text.my_main) refers to api_table.o(.text) for display_setDrawFunc
+    main.o(.text.my_main) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    main.o(.text.my_main) refers to main.o(.text.draw) for draw
+    main.o(.text.my_main) refers to main.o(.bss.balls_arry) for balls_arry
+    main.o(.text.my_main) refers to main.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.my_main) refers to main.o(.text.my_main) for [Anonymous Symbol]
+    main.o(.text.draw) refers to api_table.o(.text) for watchFace_switchUpdate
+    main.o(.text.draw) refers to main.o(.text.ball_balls) for ball_balls
+    main.o(.ARM.exidx.text.draw) refers to main.o(.text.draw) for [Anonymous Symbol]
+    main.o(.text.balls_init) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    main.o(.text.balls_init) refers to main.o(.bss.balls_arry) for balls_arry
+    main.o(.text.balls_init) refers to main.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.balls_init) refers to main.o(.text.balls_init) for [Anonymous Symbol]
+    main.o(.text.collide) refers to main.o(.text.getPixel) for getPixel
+    main.o(.ARM.exidx.text.collide) refers to main.o(.text.collide) for [Anonymous Symbol]
+    main.o(.text.getPixel) refers to watchface_api.o(.bss..L_MergedGlobals) for oledBuffer
+    main.o(.ARM.exidx.text.getPixel) refers to main.o(.text.getPixel) for [Anonymous Symbol]
+    main.o(.text.ball_balls) refers to api_table.o(.text) for millis_get
+    main.o(.text.ball_balls) refers to main.o(.text.collide) for collide
+    main.o(.text.ball_balls) refers to main.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    main.o(.text.ball_balls) refers to main.o(.bss.balls_arry) for balls_arry
+    main.o(.ARM.exidx.text.ball_balls) refers to main.o(.text.ball_balls) for [Anonymous Symbol]
+    watchface_api.o(.text.systemVariableInit) refers to api_table.o(.text) for blueToothIcon_sysVar
+    watchface_api.o(.text.systemVariableInit) refers to watchface_api.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    watchface_api.o(.ARM.exidx.text.systemVariableInit) refers to watchface_api.o(.text.systemVariableInit) for [Anonymous Symbol]
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing main.o(.text), (0 bytes).
+    Removing main.o(.ARM.exidx.text.my_main), (8 bytes).
+    Removing main.o(.ARM.exidx.text.draw), (8 bytes).
+    Removing main.o(.text.balls_init), (28 bytes).
+    Removing main.o(.ARM.exidx.text.balls_init), (8 bytes).
+    Removing main.o(.ARM.exidx.text.collide), (8 bytes).
+    Removing main.o(.ARM.exidx.text.getPixel), (8 bytes).
+    Removing main.o(.ARM.exidx.text.ball_balls), (8 bytes).
+    Removing watchface_api.o(.text), (0 bytes).
+    Removing watchface_api.o(.text.systemVariableInit), (64 bytes).
+    Removing watchface_api.o(.ARM.exidx.text.systemVariableInit), (8 bytes).
+
+11 unused section(s) (total 148 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr_w.o ABSOLUTE
+    api_table.s                              0x00000000   Number         0  api_table.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    watchface_api.c                          0x00000000   Number         0  watchface_api.o ABSOLUTE
+    [Anonymous Symbol]                       0x20007800   Section        0  main.o(.text.my_main)
+    __arm_cp.0_0                             0x20007820   Number         4  main.o(.text.my_main)
+    __arm_cp.0_1                             0x20007824   Number         4  main.o(.text.my_main)
+    .text                                    0x20007828   Section      480  api_table.o(.text)
+    .text                                    0x20007a08   Section       78  rt_memclr_w.o(.text)
+    [Anonymous Symbol]                       0x20007a58   Section        0  main.o(.text.ball_balls)
+    __arm_cp.5_0                             0x20007c10   Number         4  main.o(.text.ball_balls)
+    __arm_cp.5_1                             0x20007c14   Number         4  main.o(.text.ball_balls)
+    __arm_cp.5_2                             0x20007c18   Number         4  main.o(.text.ball_balls)
+    [Anonymous Symbol]                       0x20007c1c   Section        0  main.o(.text.collide)
+    draw                                     0x20007c81   Thumb Code    24  main.o(.text.draw)
+    [Anonymous Symbol]                       0x20007c80   Section        0  main.o(.text.draw)
+    getPixel                                 0x20007c99   Thumb Code    48  main.o(.text.getPixel)
+    [Anonymous Symbol]                       0x20007c98   Section        0  main.o(.text.getPixel)
+    __arm_cp.4_0                             0x20007cc4   Number         4  main.o(.text.getPixel)
+    ball_balls.start_seed_flag               0x20007cc8   Data           1  main.o(.bss..L_MergedGlobals)
+    [Anonymous Symbol]                       0x20007cc8   Section        0  main.o(.bss..L_MergedGlobals)
+    ball_balls.x                             0x20007cc9   Data           1  main.o(.bss..L_MergedGlobals)
+    ball_balls.y                             0x20007cca   Data           1  main.o(.bss..L_MergedGlobals)
+    ball_balls.speed_x                       0x20007ccb   Data           1  main.o(.bss..L_MergedGlobals)
+    ball_balls.speed_y                       0x20007ccc   Data           1  main.o(.bss..L_MergedGlobals)
+    activedCount                             0x20007ccd   Data           1  main.o(.bss..L_MergedGlobals)
+    seed_ball.now_seed_count                 0x20007cce   Data           1  main.o(.bss..L_MergedGlobals)
+    time_counter                             0x20007cd0   Data           4  main.o(.bss..L_MergedGlobals)
+    [Anonymous Symbol]                       0x20007cd4   Section        0  watchface_api.o(.bss..L_MergedGlobals)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    my_main                                  0x20007801   Thumb Code    40  main.o(.text.my_main)
+    alarm_getNext                            0x20007829   Thumb Code    14  api_table.o(.text)
+    alarm_getNextDay                         0x20007837   Thumb Code    14  api_table.o(.text)
+    appConfig_sysVar                         0x20007845   Thumb Code    14  api_table.o(.text)
+    colon_sysVar                             0x20007853   Thumb Code    14  api_table.o(.text)
+    display_setDrawFunc                      0x20007861   Thumb Code    14  api_table.o(.text)
+    div10                                    0x2000786f   Thumb Code    14  api_table.o(.text)
+    dowImg_sysVar                            0x2000787d   Thumb Code    14  api_table.o(.text)
+    drawBattery                              0x2000788b   Thumb Code    14  api_table.o(.text)
+    drawDate                                 0x20007899   Thumb Code    14  api_table.o(.text)
+    drawTemperature                          0x200078a7   Thumb Code    14  api_table.o(.text)
+    draw_bitmap                              0x200078b5   Thumb Code    14  api_table.o(.text)
+    draw_string                              0x200078c3   Thumb Code    14  api_table.o(.text)
+    millis_get                               0x200078d1   Thumb Code    14  api_table.o(.text)
+    mod10                                    0x200078df   Thumb Code    14  api_table.o(.text)
+    openLSM6DSM                              0x200078ed   Thumb Code    14  api_table.o(.text)
+    open_watchface_general                   0x200078fb   Thumb Code    14  api_table.o(.text)
+    stopwatch_sysVar                         0x20007909   Thumb Code    14  api_table.o(.text)
+    stopwatch_active                         0x20007917   Thumb Code    14  api_table.o(.text)
+    timeDate_sysVar                          0x20007925   Thumb Code    14  api_table.o(.text)
+    time_timeMode                            0x20007933   Thumb Code    14  api_table.o(.text)
+    watchFace_switchUpdate                   0x20007941   Thumb Code    14  api_table.o(.text)
+    console_log                              0x2000794f   Thumb Code    14  api_table.o(.text)
+    drawVectorChar                           0x2000795d   Thumb Code    14  api_table.o(.text)
+    setVectorDrawClipWin                     0x2000796b   Thumb Code    14  api_table.o(.text)
+    getBtLinkState                           0x20007979   Thumb Code    14  api_table.o(.text)
+    getCharingState                          0x20007987   Thumb Code    14  api_table.o(.text)
+    blueToothIcon_sysVar                     0x20007995   Thumb Code    14  api_table.o(.text)
+    chargeIcon_sysVar                        0x200079a3   Thumb Code    14  api_table.o(.text)
+    myOLED_DrawLine                          0x200079b1   Thumb Code    14  api_table.o(.text)
+    smallFont_sysVar                         0x200079bf   Thumb Code    14  api_table.o(.text)
+    ticker                                   0x200079cd   Thumb Code    14  api_table.o(.text)
+    draw_point                               0x200079db   Thumb Code    14  api_table.o(.text)
+    drawCude3D                               0x200079e9   Thumb Code    14  api_table.o(.text)
+    oledBuffer_sysVar                        0x200079f7   Thumb Code    14  api_table.o(.text)
+    __aeabi_memclr4                          0x20007a09   Thumb Code     0  rt_memclr_w.o(.text)
+    __aeabi_memclr8                          0x20007a09   Thumb Code     0  rt_memclr_w.o(.text)
+    __rt_memclr_w                            0x20007a09   Thumb Code    78  rt_memclr_w.o(.text)
+    _memset_w                                0x20007a0d   Thumb Code     0  rt_memclr_w.o(.text)
+    ball_balls                               0x20007a59   Thumb Code   452  main.o(.text.ball_balls)
+    collide                                  0x20007c1d   Thumb Code   100  main.o(.text.collide)
+    blueToothIcon                            0x20007cd4   Data           4  watchface_api.o(.bss..L_MergedGlobals)
+    chargeIcon                               0x20007cd8   Data           4  watchface_api.o(.bss..L_MergedGlobals)
+    stopwatch                                0x20007cdc   Data           4  watchface_api.o(.bss..L_MergedGlobals)
+    dowImg                                   0x20007ce0   Data           4  watchface_api.o(.bss..L_MergedGlobals)
+    colon                                    0x20007ce4   Data           4  watchface_api.o(.bss..L_MergedGlobals)
+    timeDate                                 0x20007ce8   Data           4  watchface_api.o(.bss..L_MergedGlobals)
+    appConfig                                0x20007cec   Data           4  watchface_api.o(.bss..L_MergedGlobals)
+    smallFont                                0x20007cf0   Data           4  watchface_api.o(.bss..L_MergedGlobals)
+    oledBuffer                               0x20007cf4   Data           4  watchface_api.o(.bss..L_MergedGlobals)
+    balls_arry                               0x20007cf8   Data         500  main.o(.bss.balls_arry)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x20007801
+
+  Load Region LR_IROM1 (Base: 0x20007800, Size: 0x000004c8, Max: 0x00010800, ABSOLUTE)
+
+    Execution Region RW_IRAM2 (Exec base: 0x10000000, Load base: 0x20007cc8, Size: 0x00000000, Max: 0x00004000, ABSOLUTE)
+
+    **** No section assigned to this execution region ****
+
+
+    Execution Region ER_IROM1 (Exec base: 0x20007800, Load base: 0x20007800, Size: 0x000006ec, Max: 0x00010800, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20007800   0x20007800   0x00000028   Code   RO            2  * .text.my_main       main.o
+    0x20007828   0x20007828   0x000001e0   Code   RO           16    .text               api_table.o
+    0x20007a08   0x20007a08   0x0000004e   Code   RO           23    .text               c_w.l(rt_memclr_w.o)
+    0x20007a56   0x20007a56   0x00000002   PAD
+    0x20007a58   0x20007a58   0x000001c4   Code   RO           12    .text.ball_balls    main.o
+    0x20007c1c   0x20007c1c   0x00000064   Code   RO            8    .text.collide       main.o
+    0x20007c80   0x20007c80   0x00000018   Code   RO            4    .text.draw          main.o
+    0x20007c98   0x20007c98   0x00000030   Code   RO           10    .text.getPixel      main.o
+    0x20007cc8        -       0x0000000c   Zero   RW           15    .bss..L_MergedGlobals  main.o
+    0x20007cd4        -       0x00000024   Zero   RW           20    .bss..L_MergedGlobals  watchface_api.o
+    0x20007cf8        -       0x000001f4   Zero   RW           14    .bss.balls_arry     main.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       480          4          0          0          0          0   api_table.o
+       664         28          0          0        512          0   main.o
+         0          0          0          0         36          0   watchface_api.o
+
+    ----------------------------------------------------------------------
+      1144         32          0          0        548          0   Object Totals
+         0          0          0          0          0          0   (incl. Generated)
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+        78          0          0          0          0          0   rt_memclr_w.o
+
+    ----------------------------------------------------------------------
+        80          0          0          0          0          0   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+        78          0          0          0          0          0   c_w.l
+
+    ----------------------------------------------------------------------
+        80          0          0          0          0          0   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      1224         32          0          0        548          0   Grand Totals
+      1224         32          0          0        548          0   ELF Image Totals
+      1224         32          0          0          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 1224 (   1.20kB)
+    Total RW  Size (RW Data + ZI Data)               548 (   0.54kB)
+    Total ROM Size (Code + RO Data + RW Data)       1224 (   1.20kB)
+
+==============================================================================
+

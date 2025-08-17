@@ -1,0 +1,354 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [.\Objects\É³ºÐ.axf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image .\Objects\É³ºÐ.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6130100: Last Updated: Sun Aug 17 11:00:22 2025
+<BR><P>
+<H3>Maximum Stack Usage =          0 bytes + Unknown(Untraceable Function Pointers)</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+
+<P>
+<H3>
+Function Pointers
+</H3><UL>
+ <LI><a href="#[2]">_printf_input_char</a> from _printf_char_common.o(.text) referenced from _printf_char_common.o(.text)
+ <LI><a href="#[1]">_sputc</a> from _sputc.o(.text) referenced from noretval__2sprintf.o(.text)
+ <LI><a href="#[0]">draw</a> from main.o(.text.draw) referenced from main.o(.text.my_main)
+</UL>
+<P>
+<H3>
+Global Symbols
+</H3>
+<P><STRONG><a name="[3]"></a>my_main</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, main.o(.text.my_main))
+<BR><BR>[Calls]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;open_watchface_general
+<LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;openLSM6DSM
+<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_setDrawFunc
+</UL>
+
+<P><STRONG><a name="[8]"></a>_printf_f</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, _printf_f.o(.ARM.Collect$$_printf_percent$$00000003))
+<BR><BR>[Calls]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_dec
+</UL>
+
+<P><STRONG><a name="[e]"></a>_printf_percent</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000))
+<BR><BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__printf
+</UL>
+
+<P><STRONG><a name="[4]"></a>display_setDrawFunc</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_main
+</UL>
+
+<P><STRONG><a name="[1d]"></a>draw_string</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[19]"></a>millis_get</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;solver_update
+<LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[7]"></a>openLSM6DSM</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_main
+</UL>
+
+<P><STRONG><a name="[5]"></a>open_watchface_general</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_main
+</UL>
+
+<P><STRONG><a name="[1e]"></a>watchFace_switchUpdate</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[21]"></a>ticker</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[26]"></a>draw_point</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;solver_update
+</UL>
+
+<P><STRONG><a name="[a]"></a>__2sprintf</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, noretval__2sprintf.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sputc
+<LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
+</UL>
+<BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[c]"></a>__printf</STRONG> (Thumb, 270 bytes, Stack size 0 bytes, __printf_wp.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_percent
+<LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_is_digit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
+</UL>
+
+<P><STRONG><a name="[6]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memclr_w.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_main
+</UL>
+
+<P><STRONG><a name="[15]"></a>_printf_fp_dec_real</STRONG> (Thumb, 620 bytes, Stack size 0 bytes, _printf_fp_dec.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
+<LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_infnan
+<LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_locale
+<LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+</UL>
+<BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_dec
+</UL>
+
+<P><STRONG><a name="[b]"></a>_printf_char_common</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, _printf_char_common.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__printf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+</UL>
+
+<P><STRONG><a name="[1]"></a>_sputc</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, _sputc.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> noretval__2sprintf.o(.text)
+</UL>
+<P><STRONG><a name="[18]"></a>__rt_locale</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, rt_locale.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_dec_real
+</UL>
+
+<P><STRONG><a name="[14]"></a>_ll_udiv10</STRONG> (Thumb, 138 bytes, Stack size 0 bytes, lludiv10.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+</UL>
+
+<P><STRONG><a name="[17]"></a>_printf_fp_infnan</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, _printf_fp_infnan.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_dec_real
+</UL>
+
+<P><STRONG><a name="[10]"></a>_btod_etento</STRONG> (Thumb, 224 bytes, Stack size 0 bytes, bigflt0.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_emul
+<LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_ediv
+</UL>
+<BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+</UL>
+
+<P><STRONG><a name="[2d]"></a>strcmp</STRONG> (Thumb, 124 bytes, Stack size 0 bytes, strcmpv7em.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_get_lc_numeric
+</UL>
+
+<P><STRONG><a name="[23]"></a>sand_move</STRONG> (Thumb, 308 bytes, Stack size 0 bytes, main.o(.text.sand_move))
+<BR><BR>[Calls]<UL><LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_collode_sand
+<LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getPixel
+</UL>
+<BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;solver_update
+</UL>
+
+<P><STRONG><a name="[22]"></a>solver_update</STRONG> (Thumb, 224 bytes, Stack size 0 bytes, main.o(.text.solver_update))
+<BR><BR>[Calls]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sand_move
+<LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;millis_get
+<LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_point
+</UL>
+<BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[11]"></a>_btod_d2e</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, btod.o(CL$$btod_d2e))
+<BR><BR>[Calls]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_d2e_norm_op1
+</UL>
+<BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+</UL>
+
+<P><STRONG><a name="[28]"></a>_d2e_denorm_low</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, btod.o(CL$$btod_d2e_denorm_low))
+<BR><BR>[Called By]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_d2e_norm_op1
+</UL>
+
+<P><STRONG><a name="[27]"></a>_d2e_norm_op1</STRONG> (Thumb, 96 bytes, Stack size 0 bytes, btod.o(CL$$btod_d2e_norm_op1))
+<BR><BR>[Calls]<UL><LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_d2e_denorm_low
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_d2e
+</UL>
+
+<P><STRONG><a name="[29]"></a>__btod_div_common</STRONG> (Thumb, 696 bytes, Stack size 0 bytes, btod.o(CL$$btod_div_common))
+<BR><BR>[Called By]<UL><LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_ediv
+</UL>
+
+<P><STRONG><a name="[2a]"></a>_e2e</STRONG> (Thumb, 220 bytes, Stack size 0 bytes, btod.o(CL$$btod_e2e))
+<BR><BR>[Called By]<UL><LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_emul
+<LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_ediv
+</UL>
+
+<P><STRONG><a name="[12]"></a>_btod_ediv</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, btod.o(CL$$btod_ediv))
+<BR><BR>[Calls]<UL><LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_e2e
+<LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__btod_div_common
+</UL>
+<BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_etento
+<LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+</UL>
+
+<P><STRONG><a name="[13]"></a>_btod_emul</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, btod.o(CL$$btod_emul))
+<BR><BR>[Calls]<UL><LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__btod_mult_common
+<LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_e2e
+</UL>
+<BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_etento
+<LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+</UL>
+
+<P><STRONG><a name="[2b]"></a>__btod_mult_common</STRONG> (Thumb, 580 bytes, Stack size 0 bytes, btod.o(CL$$btod_mult_common))
+<BR><BR>[Called By]<UL><LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_emul
+</UL>
+
+<P><STRONG><a name="[16]"></a>__ARM_fpclassify</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, fpclassify.o(i.__ARM_fpclassify))
+<BR><BR>[Called By]<UL><LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_dec_real
+</UL>
+
+<P><STRONG><a name="[d]"></a>_is_digit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, __printf_wp.o(i._is_digit))
+<BR><BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__printf
+</UL>
+
+<P><STRONG><a name="[2c]"></a>_get_lc_numeric</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, lc_numeric_c.o(locale$$code), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
+</UL>
+
+<P><STRONG><a name="[30]"></a>__fpl_dcmp_Inf</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, dcmpi.o(x$fpl$dcmpinf), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dcmple
+<LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dcmpge
+<LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dcmpeq
+</UL>
+
+<P><STRONG><a name="[2e]"></a>_dcmpeq</STRONG> (Thumb, 120 bytes, Stack size 0 bytes, deqf.o(x$fpl$deqf), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dnaninf
+<LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dcmp_Inf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dneq
+<LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_deq
+</UL>
+
+<P><STRONG><a name="[31]"></a>_dcmpge</STRONG> (Thumb, 120 bytes, Stack size 0 bytes, dgeqf.o(x$fpl$dgeqf), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dnaninf
+<LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dcmp_Inf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dgeq
+<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dgr
+</UL>
+
+<P><STRONG><a name="[32]"></a>_dcmple</STRONG> (Thumb, 120 bytes, Stack size 0 bytes, dleqf.o(x$fpl$dleqf), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dnaninf
+<LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dcmp_Inf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dls
+<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dleq
+</UL>
+
+<P><STRONG><a name="[2f]"></a>__fpl_dnaninf</STRONG> (Thumb, 156 bytes, Stack size 0 bytes, dnaninf.o(x$fpl$dnaninf), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dcmple
+<LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dcmpge
+<LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dcmpeq
+</UL>
+
+<P><STRONG><a name="[35]"></a>__fpl_dretinf</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, dretinf.o(x$fpl$dretinf), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_f2d
+</UL>
+
+<P><STRONG><a name="[1c]"></a>__aeabi_f2d</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, f2d.o(x$fpl$f2d))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[33]"></a>_f2d</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, f2d.o(x$fpl$f2d), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fnaninf
+<LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dretinf
+</UL>
+
+<P><STRONG><a name="[36]"></a>_deq</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, dcmp.o(x$fpl$fcmp), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dcmpeq
+</UL>
+
+<P><STRONG><a name="[37]"></a>_dneq</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, dcmp.o(x$fpl$fcmp), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dcmpeq
+</UL>
+
+<P><STRONG><a name="[1f]"></a>__aeabi_dcmpgt</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, dcmp.o(x$fpl$fcmp))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[38]"></a>_dgr</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, dcmp.o(x$fpl$fcmp), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dcmpge
+</UL>
+
+<P><STRONG><a name="[39]"></a>_dgeq</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, dcmp.o(x$fpl$fcmp), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dcmpge
+</UL>
+
+<P><STRONG><a name="[3a]"></a>_dleq</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, dcmp.o(x$fpl$fcmp), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dcmple
+</UL>
+
+<P><STRONG><a name="[20]"></a>__aeabi_dcmplt</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, dcmp.o(x$fpl$fcmp))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[3b]"></a>_dls</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, dcmp.o(x$fpl$fcmp), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dcmple
+</UL>
+
+<P><STRONG><a name="[1b]"></a>__aeabi_fdiv</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, fdiv.o(x$fpl$fdiv))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[3c]"></a>_fdiv</STRONG> (Thumb, 384 bytes, Stack size 0 bytes, fdiv.o(x$fpl$fdiv), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fretinf
+<LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fnaninf
+</UL>
+
+<P><STRONG><a name="[1a]"></a>__aeabi_ui2f</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, fflt_clz.o(x$fpl$ffltu))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[34]"></a>__fpl_fnaninf</STRONG> (Thumb, 140 bytes, Stack size 0 bytes, fnaninf.o(x$fpl$fnaninf), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdiv
+<LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_f2d
+</UL>
+
+<P><STRONG><a name="[3d]"></a>__fpl_fretinf</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, fretinf.o(x$fpl$fretinf), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdiv
+</UL>
+
+<P><STRONG><a name="[9]"></a>_printf_fp_dec</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, printf1.o(x$fpl$printf1))
+<BR><BR>[Calls]<UL><LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_dec_real
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_f
+</UL>
+<P>
+<H3>
+Local Symbols
+</H3>
+<P><STRONG><a name="[0]"></a>draw</STRONG> (Thumb, 244 bytes, Stack size 0 bytes, main.o(.text.draw))
+<BR><BR>[Calls]<UL><LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
+<LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
+<LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
+<LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dcmplt
+<LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dcmpgt
+<LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;watchFace_switchUpdate
+<LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ticker
+<LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;solver_update
+<LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;millis_get
+<LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_string
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> main.o(.text.my_main)
+</UL>
+<P><STRONG><a name="[24]"></a>getPixel</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, main.o(.text.getPixel))
+<BR><BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sand_move
+</UL>
+
+<P><STRONG><a name="[25]"></a>is_collode_sand</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, main.o(.text.is_collode_sand))
+<BR><BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sand_move
+</UL>
+
+<P><STRONG><a name="[f]"></a>_fp_digits</STRONG> (Thumb, 432 bytes, Stack size 0 bytes, _printf_fp_dec.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_emul
+<LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_ediv
+<LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_d2e
+<LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_etento
+<LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ll_udiv10
+</UL>
+<BR>[Called By]<UL><LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_dec_real
+</UL>
+
+<P><STRONG><a name="[2]"></a>_printf_input_char</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, _printf_char_common.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> _printf_char_common.o(.text)
+</UL><P>
+<H3>
+Undefined Global Symbols
+</H3><HR></body></html>

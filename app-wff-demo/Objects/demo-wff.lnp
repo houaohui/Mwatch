@@ -1,8 +1,0 @@
---cpu=Cortex-M4.fp.sp --branchpatch=sdcomp-29491-629360
-".\objects\main.o"
-".\objects\api_table.o"
-".\objects\watchface_api.o"
---nodebug --scatter ".\Objects\app-evasion.sct"
---entry=my_main --first=my_main --no_startup --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
---info sizes --info totals --info unused --info veneers
---list ".\Listings\demo-wff.map" -o .\Objects\demo-wff.axf

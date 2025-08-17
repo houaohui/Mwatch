@@ -1,0 +1,199 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [.\Objects\矢量滚动.axf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image .\Objects\矢量滚动.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6130100: Last Updated: Sun Aug 17 11:02:35 2025
+<BR><P>
+<H3>Maximum Stack Usage =          0 bytes + Unknown(Untraceable Function Pointers)</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+
+<P>
+<H3>
+Function Pointers
+</H3><UL>
+ <LI><a href="#[1]">div10</a> from api_table.o(.text) referenced from main.o(.text.ticker)
+ <LI><a href="#[0]">draw</a> from main.o(.text.draw) referenced from main.o(.text.my_main)
+ <LI><a href="#[3]">drawTickerNum</a> from main.o(.text.drawTickerNum) referenced from main.o(.text.ticker)
+ <LI><a href="#[2]">mod10</a> from api_table.o(.text) referenced from main.o(.text.ticker)
+</UL>
+<P>
+<H3>
+Global Symbols
+</H3>
+<P><STRONG><a name="[4]"></a>my_main</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, main.o(.text.my_main))
+<BR><BR>[Calls]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systemVariableInit
+<LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;open_watchface_general
+<LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;openLSM6DSM
+<LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_setDrawFunc
+</UL>
+
+<P><STRONG><a name="[13]"></a>alarm_getNext</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[15]"></a>alarm_getNextDay</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[1e]"></a>appConfig_sysVar</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systemVariableInit
+</UL>
+
+<P><STRONG><a name="[1c]"></a>colon_sysVar</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systemVariableInit
+</UL>
+
+<P><STRONG><a name="[6]"></a>display_setDrawFunc</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_main
+</UL>
+
+<P><STRONG><a name="[1]"></a>div10</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ticker
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> main.o(.text.ticker)
+</UL>
+<P><STRONG><a name="[1b]"></a>dowImg_sysVar</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systemVariableInit
+</UL>
+
+<P><STRONG><a name="[c]"></a>drawBattery</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[a]"></a>drawDate</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[d]"></a>drawTemperature</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[10]"></a>draw_bitmap</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ticker
+<LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[20]"></a>draw_string</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ticker
+</UL>
+
+<P><STRONG><a name="[1f]"></a>millis_get</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ticker
+</UL>
+
+<P><STRONG><a name="[2]"></a>mod10</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ticker
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> main.o(.text.ticker)
+</UL>
+<P><STRONG><a name="[8]"></a>openLSM6DSM</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_main
+</UL>
+
+<P><STRONG><a name="[7]"></a>open_watchface_general</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_main
+</UL>
+
+<P><STRONG><a name="[1a]"></a>stopwatch_sysVar</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systemVariableInit
+</UL>
+
+<P><STRONG><a name="[12]"></a>stopwatch_active</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[1d]"></a>timeDate_sysVar</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systemVariableInit
+</UL>
+
+<P><STRONG><a name="[14]"></a>time_timeMode</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[9]"></a>watchFace_switchUpdate</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[17]"></a>drawVectorChar</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawTickerNum
+</UL>
+
+<P><STRONG><a name="[16]"></a>setVectorDrawClipWin</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawTickerNum
+</UL>
+
+<P><STRONG><a name="[11]"></a>getBtLinkState</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[e]"></a>getCharingState</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[18]"></a>blueToothIcon_sysVar</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systemVariableInit
+</UL>
+
+<P><STRONG><a name="[19]"></a>chargeIcon_sysVar</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systemVariableInit
+</UL>
+
+<P><STRONG><a name="[5]"></a>systemVariableInit</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, watchface_api.o(.text.systemVariableInit))
+<BR><BR>[Calls]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chargeIcon_sysVar
+<LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blueToothIcon_sysVar
+<LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timeDate_sysVar
+<LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stopwatch_sysVar
+<LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dowImg_sysVar
+<LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;colon_sysVar
+<LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;appConfig_sysVar
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_main
+</UL>
+
+<P><STRONG><a name="[b]"></a>ticker</STRONG> (Thumb, 724 bytes, Stack size 0 bytes, main.o(.text.ticker))
+<BR><BR>[Calls]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mod10
+<LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;millis_get
+<LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_string
+<LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_bitmap
+<LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;div10
+<LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawTickerNum
+</UL>
+<BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+<P>
+<H3>
+Local Symbols
+</H3>
+<P><STRONG><a name="[f]"></a>animateIcon</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, main.o(.text.animateIcon))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[0]"></a>draw</STRONG> (Thumb, 264 bytes, Stack size 0 bytes, main.o(.text.draw))
+<BR><BR>[Calls]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;watchFace_switchUpdate
+<LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_timeMode
+<LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ticker
+<LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stopwatch_active
+<LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getCharingState
+<LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getBtLinkState
+<LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_bitmap
+<LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawTemperature
+<LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawDate
+<LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawBattery
+<LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;alarm_getNextDay
+<LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;alarm_getNext
+<LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;animateIcon
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> main.o(.text.my_main)
+</UL>
+<P><STRONG><a name="[3]"></a>drawTickerNum</STRONG> (Thumb, 160 bytes, Stack size 0 bytes, main.o(.text.drawTickerNum))
+<BR><BR>[Calls]<UL><LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setVectorDrawClipWin
+<LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawVectorChar
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ticker
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> main.o(.text.ticker)
+</UL><P>
+<H3>
+Undefined Global Symbols
+</H3><HR></body></html>

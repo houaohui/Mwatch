@@ -1,0 +1,77 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [.\Objects\ÖÕ¶ËÄ£Äâ.axf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image .\Objects\ÖÕ¶ËÄ£Äâ.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6130100: Last Updated: Sun Aug 17 11:01:42 2025
+<BR><P>
+<H3>Maximum Stack Usage =          0 bytes + Unknown(Untraceable Function Pointers)</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+
+<P>
+<H3>
+Function Pointers
+</H3><UL>
+ <LI><a href="#[0]">draw</a> from main.o(.text.draw) referenced from main.o(.text.my_main)
+</UL>
+<P>
+<H3>
+Global Symbols
+</H3>
+<P><STRONG><a name="[1]"></a>my_main</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, main.o(.text.my_main))
+<BR><BR>[Calls]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;terminalSim_setup
+<LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;open_watchface_general
+<LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_setDrawFunc
+</UL>
+
+<P><STRONG><a name="[2]"></a>display_setDrawFunc</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_main
+</UL>
+
+<P><STRONG><a name="[8]"></a>millis_get</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;terminalSim_setup
+<LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;terminalSim_draw
+</UL>
+
+<P><STRONG><a name="[3]"></a>open_watchface_general</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_main
+</UL>
+
+<P><STRONG><a name="[5]"></a>watchFace_switchUpdate</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[6]"></a>ticker</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[9]"></a>draw_point</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;terminalSim_draw
+</UL>
+
+<P><STRONG><a name="[7]"></a>terminalSim_draw</STRONG> (Thumb, 68 bytes, Stack size 0 bytes, main.o(.text.terminalSim_draw))
+<BR><BR>[Calls]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;millis_get
+<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_point
+</UL>
+<BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+
+<P><STRONG><a name="[4]"></a>terminalSim_setup</STRONG> (Thumb, 68 bytes, Stack size 0 bytes, main.o(.text.terminalSim_setup))
+<BR><BR>[Calls]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;millis_get
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_main
+</UL>
+<P>
+<H3>
+Local Symbols
+</H3>
+<P><STRONG><a name="[0]"></a>draw</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, main.o(.text.draw))
+<BR><BR>[Calls]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;watchFace_switchUpdate
+<LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ticker
+<LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;terminalSim_draw
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> main.o(.text.my_main)
+</UL><P>
+<H3>
+Undefined Global Symbols
+</H3><HR></body></html>
