@@ -58,8 +58,8 @@ $name_ PROC
 	api_item blueToothIcon_sysVar,27,VAR ;
 	api_item chargeIcon_sysVar,28,VAR ;
 	api_item myOLED_DrawLine,29,FUNC ;
-	api_item smallFont_sysVar,29,VAR ;
-	api_item ticker,29,FUNC ;
+	api_item smallFont_sysVar,30,VAR ;
+	api_item ticker,31,FUNC ;
 	; ...省略其它api定义...
 
     ALIGN   4

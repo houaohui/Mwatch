@@ -38,8 +38,9 @@ void sandSim_init(void);
 //watch face
 void my_main(void)
 {
+	systemVariableInit();
 	display_setDrawFunc(draw);
-		open_watchface_general(); // 通用的表盘打开函数
+	open_watchface_general(); // 通用的表盘打开函数
 	sandSim_init();
 	openLSM6DSM(LSM_ACC_GYRO);
 }
@@ -64,7 +65,7 @@ typedef struct {
 
 Solver_s solver;
 
-#define SHOW_FPS 1
+#define SHOW_FPS 0
 
 static display_t draw()
 {
@@ -73,8 +74,8 @@ static display_t draw()
 	millis8_t delt_ms = millis_get() - lastUpdate;
 	lastUpdate = millis_get();
 	float fps = 1000/(float)delt_ms;
-	char buff[10];
-	sprintf_P(buff, "%.2f", fps);
+	char buff[10]={0};
+	snprintf(buff,10, "%f %x", fps, buff[2]);
 	draw_string(buff,0,0,0);
 #endif
 	watchFace_switchUpdate();
@@ -261,10 +262,10 @@ void solver_update(void) {
 		
 	}
 	
-//	char buff[5];
-//	
-//	sprintf_P(buff, PSTR("%d"), solver.activedCount );
-//	draw_string(buff,false,0,64-16 -8);
+	char buff[5];
+	
+	sprintf_P(buff, PSTR("%d"), solver.activedCount );
+	draw_string(buff,false,0,0);
 //	
 //	sprintf_P(buff, PSTR("%d"), solver.acc_x);
 //	draw_string(buff,false,0,64-16);

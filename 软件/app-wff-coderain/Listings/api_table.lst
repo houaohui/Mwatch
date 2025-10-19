@@ -555,7 +555,7 @@ ARM Macro Assembler    Page 9
    21 00000196                 ELSE
    25                          ENDIF
    26 00000196                 ENDP
-   61 00000196                 api_item         smallFont_sysVar,29,VAR ;
+   61 00000196                 api_item         smallFont_sysVar,30,VAR ;
    12 00000196                 EXPORT           smallFont_sysVar
    13 00000196         smallFont_sysVar
                                PROC
@@ -566,12 +566,12 @@ ARM Macro Assembler    Page 9
    16 0000019E         
    17 0000019E                 IF               "VAR" == "FUNC"
    22 0000019E         ; 变量处理：返回变量指针
-   23 0000019E F8DC 0074       LDR              r0, [r12, #4*29] ; 直接加载
+   23 0000019E F8DC 0078       LDR              r0, [r12, #4*30] ; 直接加载
                                                             变量指针值
    24 000001A2 4770            BX               lr
    25 000001A4                 ENDIF
    26 000001A4                 ENDP
-   62 000001A4                 api_item         ticker,29,FUNC ;
+   62 000001A4                 api_item         ticker,31,FUNC ;
    12 000001A4                 EXPORT           ticker
    13 000001A4         ticker  PROC
    14 000001A4 F8DF C00C       LDR              r12, =table_ptr ; 加载API表�
@@ -581,7 +581,7 @@ ARM Macro Assembler    Page 9
    16 000001AC         
    17 000001AC                 IF               "FUNC" == "FUNC"
    18 000001AC         ; 函数处理：跳转到目标函数
-   19 000001AC F8DC C074       LDR              r12, [r12, #4*29]
+   19 000001AC F8DC C07C       LDR              r12, [r12, #4*31]
    20 000001B0 4760            BX               r12
 
 

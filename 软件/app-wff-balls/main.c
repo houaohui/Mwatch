@@ -40,6 +40,7 @@ void balls_init(void);
 //watch face
 void my_main(void)
 {
+	systemVariableInit();
 	display_setDrawFunc(draw);
 	open_watchface_general(); // ͨ�õı��̴򿪺���
 	balls_init();

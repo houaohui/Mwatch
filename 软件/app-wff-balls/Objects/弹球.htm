@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\起白.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\起白.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6130100: Last Updated: Sun Aug 17 10:57:50 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6130100: Last Updated: Mon Sep  8 20:41:24 2025
 <BR><P>
 <H3>Maximum Stack Usage =          0 bytes + Unknown(Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -18,66 +18,130 @@ Function Pointers
 <H3>
 Global Symbols
 </H3>
-<P><STRONG><a name="[1]"></a>my_main</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, main.o(.text.my_main))
-<BR><BR>[Calls]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-<LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;open_watchface_general
-<LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_setDrawFunc
+<P><STRONG><a name="[1]"></a>my_main</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, main.o(.text.my_main))
+<BR><BR>[Calls]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systemVariableInit
+<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;open_watchface_general
+<LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_setDrawFunc
 </UL>
 
-<P><STRONG><a name="[2]"></a>display_setDrawFunc</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<P><STRONG><a name="[16]"></a>appConfig_sysVar</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systemVariableInit
+</UL>
+
+<P><STRONG><a name="[14]"></a>colon_sysVar</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systemVariableInit
+</UL>
+
+<P><STRONG><a name="[3]"></a>display_setDrawFunc</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_main
 </UL>
 
-<P><STRONG><a name="[6]"></a>millis_get</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ball_balls
+<P><STRONG><a name="[13]"></a>dowImg_sysVar</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systemVariableInit
 </UL>
 
-<P><STRONG><a name="[3]"></a>open_watchface_general</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<P><STRONG><a name="[a]"></a>millis_get</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ball_balls
+</UL>
+
+<P><STRONG><a name="[4]"></a>open_watchface_general</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_main
 </UL>
 
-<P><STRONG><a name="[a]"></a>watchFace_switchUpdate</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<P><STRONG><a name="[12]"></a>stopwatch_sysVar</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systemVariableInit
+</UL>
+
+<P><STRONG><a name="[15]"></a>timeDate_sysVar</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systemVariableInit
+</UL>
+
+<P><STRONG><a name="[e]"></a>watchFace_switchUpdate</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
 </UL>
 
-<P><STRONG><a name="[b]"></a>ticker</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<P><STRONG><a name="[10]"></a>blueToothIcon_sysVar</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systemVariableInit
+</UL>
+
+<P><STRONG><a name="[11]"></a>chargeIcon_sysVar</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systemVariableInit
+</UL>
+
+<P><STRONG><a name="[17]"></a>smallFont_sysVar</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systemVariableInit
+</UL>
+
+<P><STRONG><a name="[f]"></a>ticker</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
 </UL>
 
-<P><STRONG><a name="[8]"></a>draw_point</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ball_balls
+<P><STRONG><a name="[c]"></a>draw_point</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ball_balls
 </UL>
 
-<P><STRONG><a name="[4]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memclr_w.o(.text))
+<P><STRONG><a name="[18]"></a>oledBuffer_sysVar</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, api_table.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systemVariableInit
+</UL>
+
+<P><STRONG><a name="[7]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
+<LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
+</UL>
+
+<P><STRONG><a name="[6]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
+</UL>
+
+<P><STRONG><a name="[5]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_main
 </UL>
 
-<P><STRONG><a name="[5]"></a>ball_balls</STRONG> (Thumb, 452 bytes, Stack size 0 bytes, main.o(.text.ball_balls))
-<BR><BR>[Calls]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;millis_get
-<LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_point
-<LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collide
+<P><STRONG><a name="[8]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
+</UL>
+
+<P><STRONG><a name="[9]"></a>ball_balls</STRONG> (Thumb, 528 bytes, Stack size 0 bytes, main.o(.text.ball_balls))
+<BR><BR>[Calls]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;millis_get
+<LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_point
+<LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collide
 </UL>
 <BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
 </UL>
 
-<P><STRONG><a name="[7]"></a>collide</STRONG> (Thumb, 100 bytes, Stack size 0 bytes, main.o(.text.collide))
-<BR><BR>[Calls]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getPixel
+<P><STRONG><a name="[b]"></a>collide</STRONG> (Thumb, 100 bytes, Stack size 0 bytes, main.o(.text.collide))
+<BR><BR>[Calls]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getPixel
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ball_balls
+<BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ball_balls
+</UL>
+
+<P><STRONG><a name="[2]"></a>systemVariableInit</STRONG> (Thumb, 72 bytes, Stack size 0 bytes, watchface_api.o(.text.systemVariableInit))
+<BR><BR>[Calls]<UL><LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oledBuffer_sysVar
+<LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;smallFont_sysVar
+<LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chargeIcon_sysVar
+<LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blueToothIcon_sysVar
+<LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timeDate_sysVar
+<LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stopwatch_sysVar
+<LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dowImg_sysVar
+<LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;colon_sysVar
+<LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;appConfig_sysVar
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_main
 </UL>
 <P>
 <H3>
 Local Symbols
 </H3>
 <P><STRONG><a name="[0]"></a>draw</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, main.o(.text.draw))
-<BR><BR>[Calls]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;watchFace_switchUpdate
-<LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ticker
-<LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ball_balls
+<BR><BR>[Calls]<UL><LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;watchFace_switchUpdate
+<LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ticker
+<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ball_balls
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.text.my_main)
 </UL>
-<P><STRONG><a name="[9]"></a>getPixel</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, main.o(.text.getPixel))
-<BR><BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collide
+<P><STRONG><a name="[d]"></a>getPixel</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, main.o(.text.getPixel))
+<BR><BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collide
 </UL>
 <P>
 <H3>

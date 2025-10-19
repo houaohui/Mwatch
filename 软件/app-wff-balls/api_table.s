@@ -63,6 +63,7 @@ $name_ PROC
 	api_item draw_point,32,FUNC ;
 	api_item drawCude3D,33,FUNC ;
 	api_item oledBuffer_sysVar,34,VAR ;
+	api_item oled_flush,35,FUNC ;
 	; ...省略其它api定义...
 
     ALIGN   4

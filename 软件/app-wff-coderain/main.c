@@ -39,6 +39,7 @@ display_t codeRain_draw(void);
 //watch face
 void my_main(void)
 {
+	systemVariableInit();
 	display_setDrawFunc(draw);
 	open_watchface_general(); // 通用的表盘打开函数
 	codeRain_setup();
@@ -93,7 +94,7 @@ display_t codeRain_draw(void)
 			// print character in 2D array
 			char c = m[i][j] - 0x20;
 			if(y < 64 && y > -8)
-			draw_bitmap(x, y, (const unsigned char *)smallFont[(byte)c], SMALLFONT_WIDTH, SMALLFONT_HEIGHT, 0, 0);
+			draw_bitmap(x, y, (const unsigned char *)(*smallFont)[(byte)c], SMALLFONT_WIDTH, SMALLFONT_HEIGHT, 0, 0);
 		}
 	}
 	return DISPLAY_BUSY;

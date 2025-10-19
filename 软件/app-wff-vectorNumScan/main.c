@@ -100,7 +100,7 @@ static display_t draw()
 		alarmTime.mins = nextAlarm.min;
 		alarmTime.ampm = CHAR_24;
 		time_timeMode(&alarmTime, TIMEMODE_24HR);
-		draw_bitmap(x, FRAME_HEIGHT - 8, (const unsigned char *)dowImg[alarm_getNextDay()], 8, 8, NOINVERT, 0);
+		draw_bitmap(x, FRAME_HEIGHT - 8, (const unsigned char *)(*dowImg)[alarm_getNextDay()], 8, 8, NOINVERT, 0);
 	}
 	
 	return busy;

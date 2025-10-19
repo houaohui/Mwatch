@@ -40,6 +40,7 @@ static void snowSim_init(void);
 //watch face
 void my_main(void)
 {
+	systemVariableInit();
 	display_setDrawFunc(draw);
 		open_watchface_general(); // 通用的表盘打开函数
 	snowSim_init();

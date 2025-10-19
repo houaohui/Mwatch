@@ -47,7 +47,7 @@ ARM Macro Assembler    Page 1
    12 00000000                 EXPORT           alarm_getNext
    13 00000000         alarm_getNext
                                PROC
-   14 00000000 F8DF C1D8       LDR              r12, =table_ptr ; 加载API表�
+   14 00000000 F8DF C1E8       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 00000004 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -69,7 +69,7 @@ ARM Macro Assembler    Page 1
 ARM Macro Assembler    Page 2 
 
 
-   14 0000000E F8DF C1CC       LDR              r12, =table_ptr ; 加载API表�
+   14 0000000E F8DF C1DC       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 00000012 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -85,7 +85,7 @@ ARM Macro Assembler    Page 2
    12 0000001C                 EXPORT           appConfig_sysVar
    13 0000001C         appConfig_sysVar
                                PROC
-   14 0000001C F8DF C1BC       LDR              r12, =table_ptr ; 加载API表�
+   14 0000001C F8DF C1CC       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 00000020 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -101,7 +101,7 @@ ARM Macro Assembler    Page 2
    12 0000002A                 EXPORT           colon_sysVar
    13 0000002A         colon_sysVar
                                PROC
-   14 0000002A F8DF C1B0       LDR              r12, =table_ptr ; 加载API表�
+   14 0000002A F8DF C1C0       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 0000002E F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -117,7 +117,7 @@ ARM Macro Assembler    Page 2
    12 00000038                 EXPORT           display_setDrawFunc
    13 00000038         display_setDrawFunc
                                PROC
-   14 00000038 F8DF C1A0       LDR              r12, =table_ptr ; 加载API表�
+   14 00000038 F8DF C1B0       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 0000003C F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -138,7 +138,7 @@ ARM Macro Assembler    Page 3
    37 00000046                 api_item         div10,6,FUNC ;
    12 00000046                 EXPORT           div10
    13 00000046         div10   PROC
-   14 00000046 F8DF C194       LDR              r12, =table_ptr ; 加载API表�
+   14 00000046 F8DF C1A4       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 0000004A F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -154,7 +154,7 @@ ARM Macro Assembler    Page 3
    12 00000054                 EXPORT           dowImg_sysVar
    13 00000054         dowImg_sysVar
                                PROC
-   14 00000054 F8DF C184       LDR              r12, =table_ptr ; 加载API表�
+   14 00000054 F8DF C194       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 00000058 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -170,7 +170,7 @@ ARM Macro Assembler    Page 3
    12 00000062                 EXPORT           drawBattery
    13 00000062         drawBattery
                                PROC
-   14 00000062 F8DF C178       LDR              r12, =table_ptr ; 加载API表�
+   14 00000062 F8DF C188       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 00000066 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -186,7 +186,7 @@ ARM Macro Assembler    Page 3
    12 00000070                 EXPORT           drawDate
    13 00000070         drawDate
                                PROC
-   14 00000070 F8DF C168       LDR              r12, =table_ptr ; 加载API表�
+   14 00000070 F8DF C178       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 00000074 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -208,7 +208,7 @@ ARM Macro Assembler    Page 4
    12 0000007E                 EXPORT           drawTemperature
    13 0000007E         drawTemperature
                                PROC
-   14 0000007E F8DF C15C       LDR              r12, =table_ptr ; 加载API表�
+   14 0000007E F8DF C16C       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 00000082 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -224,7 +224,7 @@ ARM Macro Assembler    Page 4
    12 0000008C                 EXPORT           draw_bitmap
    13 0000008C         draw_bitmap
                                PROC
-   14 0000008C F8DF C14C       LDR              r12, =table_ptr ; 加载API表�
+   14 0000008C F8DF C15C       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 00000090 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -240,7 +240,7 @@ ARM Macro Assembler    Page 4
    12 0000009A                 EXPORT           draw_string
    13 0000009A         draw_string
                                PROC
-   14 0000009A F8DF C140       LDR              r12, =table_ptr ; 加载API表�
+   14 0000009A F8DF C150       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 0000009E F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -256,7 +256,7 @@ ARM Macro Assembler    Page 4
    12 000000A8                 EXPORT           millis_get
    13 000000A8         millis_get
                                PROC
-   14 000000A8 F8DF C130       LDR              r12, =table_ptr ; 加载API表�
+   14 000000A8 F8DF C140       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
 
 
@@ -277,7 +277,7 @@ ARM Macro Assembler    Page 5
    45 000000B6                 api_item         mod10,14,FUNC ;
    12 000000B6                 EXPORT           mod10
    13 000000B6         mod10   PROC
-   14 000000B6 F8DF C124       LDR              r12, =table_ptr ; 加载API表�
+   14 000000B6 F8DF C134       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 000000BA F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -293,7 +293,7 @@ ARM Macro Assembler    Page 5
    12 000000C4                 EXPORT           openLSM6DSM
    13 000000C4         openLSM6DSM
                                PROC
-   14 000000C4 F8DF C114       LDR              r12, =table_ptr ; 加载API表�
+   14 000000C4 F8DF C124       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 000000C8 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -310,7 +310,7 @@ ARM Macro Assembler    Page 5
    12 000000D2                 EXPORT           open_watchface_general
    13 000000D2         open_watchface_general
                                PROC
-   14 000000D2 F8DF C108       LDR              r12, =table_ptr ; 加载API表�
+   14 000000D2 F8DF C118       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 000000D6 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -332,7 +332,7 @@ ARM Macro Assembler    Page 6
    12 000000E0                 EXPORT           stopwatch_sysVar
    13 000000E0         stopwatch_sysVar
                                PROC
-   14 000000E0 F8DF C0F8       LDR              r12, =table_ptr ; 加载API表�
+   14 000000E0 F8DF C108       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 000000E4 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -348,7 +348,7 @@ ARM Macro Assembler    Page 6
    12 000000EE                 EXPORT           stopwatch_active
    13 000000EE         stopwatch_active
                                PROC
-   14 000000EE F8DF C0EC       LDR              r12, =table_ptr ; 加载API表�
+   14 000000EE F8DF C0FC       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 000000F2 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -364,7 +364,7 @@ ARM Macro Assembler    Page 6
    12 000000FC                 EXPORT           timeDate_sysVar
    13 000000FC         timeDate_sysVar
                                PROC
-   14 000000FC F8DF C0DC       LDR              r12, =table_ptr ; 加载API表�
+   14 000000FC F8DF C0EC       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 00000100 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -380,7 +380,7 @@ ARM Macro Assembler    Page 6
    12 0000010A                 EXPORT           time_timeMode
    13 0000010A         time_timeMode
                                PROC
-   14 0000010A F8DF C0D0       LDR              r12, =table_ptr ; 加载API表�
+   14 0000010A F8DF C0E0       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 0000010E F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -403,7 +403,7 @@ ARM Macro Assembler    Page 7
    12 00000118                 EXPORT           watchFace_switchUpdate
    13 00000118         watchFace_switchUpdate
                                PROC
-   14 00000118 F8DF C0C0       LDR              r12, =table_ptr ; 加载API表�
+   14 00000118 F8DF C0D0       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 0000011C F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -419,7 +419,7 @@ ARM Macro Assembler    Page 7
    12 00000126                 EXPORT           console_log
    13 00000126         console_log
                                PROC
-   14 00000126 F8DF C0B4       LDR              r12, =table_ptr ; 加载API表�
+   14 00000126 F8DF C0C4       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 0000012A F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -435,7 +435,7 @@ ARM Macro Assembler    Page 7
    12 00000134                 EXPORT           drawVectorChar
    13 00000134         drawVectorChar
                                PROC
-   14 00000134 F8DF C0A4       LDR              r12, =table_ptr ; 加载API表�
+   14 00000134 F8DF C0B4       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 00000138 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -451,7 +451,7 @@ ARM Macro Assembler    Page 7
    12 00000142                 EXPORT           setVectorDrawClipWin
    13 00000142         setVectorDrawClipWin
                                PROC
-   14 00000142 F8DF C098       LDR              r12, =table_ptr ; 加载API表�
+   14 00000142 F8DF C0A8       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
 
 
@@ -473,7 +473,7 @@ ARM Macro Assembler    Page 8
    12 00000150                 EXPORT           getBtLinkState
    13 00000150         getBtLinkState
                                PROC
-   14 00000150 F8DF C088       LDR              r12, =table_ptr ; 加载API表�
+   14 00000150 F8DF C098       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 00000154 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -489,7 +489,7 @@ ARM Macro Assembler    Page 8
    12 0000015E                 EXPORT           getCharingState
    13 0000015E         getCharingState
                                PROC
-   14 0000015E F8DF C07C       LDR              r12, =table_ptr ; 加载API表�
+   14 0000015E F8DF C08C       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 00000162 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -505,7 +505,7 @@ ARM Macro Assembler    Page 8
    12 0000016C                 EXPORT           blueToothIcon_sysVar
    13 0000016C         blueToothIcon_sysVar
                                PROC
-   14 0000016C F8DF C06C       LDR              r12, =table_ptr ; 加载API表�
+   14 0000016C F8DF C07C       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 00000170 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -527,7 +527,7 @@ ARM Macro Assembler    Page 9
    12 0000017A                 EXPORT           chargeIcon_sysVar
    13 0000017A         chargeIcon_sysVar
                                PROC
-   14 0000017A F8DF C060       LDR              r12, =table_ptr ; 加载API表�
+   14 0000017A F8DF C070       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 0000017E F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -543,7 +543,7 @@ ARM Macro Assembler    Page 9
    12 00000188                 EXPORT           myOLED_DrawLine
    13 00000188         myOLED_DrawLine
                                PROC
-   14 00000188 F8DF C050       LDR              r12, =table_ptr ; 加载API表�
+   14 00000188 F8DF C060       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 0000018C F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -559,7 +559,7 @@ ARM Macro Assembler    Page 9
    12 00000196                 EXPORT           smallFont_sysVar
    13 00000196         smallFont_sysVar
                                PROC
-   14 00000196 F8DF C044       LDR              r12, =table_ptr ; 加载API表�
+   14 00000196 F8DF C054       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 0000019A F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -574,7 +574,7 @@ ARM Macro Assembler    Page 9
    62 000001A4                 api_item         ticker,31,FUNC ;
    12 000001A4                 EXPORT           ticker
    13 000001A4         ticker  PROC
-   14 000001A4 F8DF C034       LDR              r12, =table_ptr ; 加载API表�
+   14 000001A4 F8DF C044       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 000001A8 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -596,7 +596,7 @@ ARM Macro Assembler    Page 10
    12 000001B2                 EXPORT           draw_point
    13 000001B2         draw_point
                                PROC
-   14 000001B2 F8DF C028       LDR              r12, =table_ptr ; 加载API表�
+   14 000001B2 F8DF C038       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 000001B6 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -612,7 +612,7 @@ ARM Macro Assembler    Page 10
    12 000001C0                 EXPORT           drawCude3D
    13 000001C0         drawCude3D
                                PROC
-   14 000001C0 F8DF C018       LDR              r12, =table_ptr ; 加载API表�
+   14 000001C0 F8DF C028       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 000001C4 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -628,7 +628,7 @@ ARM Macro Assembler    Page 10
    12 000001CE                 EXPORT           oledBuffer_sysVar
    13 000001CE         oledBuffer_sysVar
                                PROC
-   14 000001CE F8DF C00C       LDR              r12, =table_ptr ; 加载API表�
+   14 000001CE F8DF C01C       LDR              r12, =table_ptr ; 加载API表�
                                                             ��针地址
    15 000001D2 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
                                                             �地址
@@ -640,22 +640,39 @@ ARM Macro Assembler    Page 10
    24 000001DA 4770            BX               lr
    25 000001DC                 ENDIF
    26 000001DC                 ENDP
-   66 000001DC         ; ...省略其它api定义...
-   67 000001DC         
-   68 000001DC                 ALIGN            4
-   69 000001DC                 END
-              2000BFFC 
-Command Line: --xref --diag_suppress=9931 --cpu=Cortex-M4 --fpu=SoftVFP --depen
-d=.\objects\api_table.d -o.\objects\api_table.o -I.\RTE\_Target_1 -IC:\Keil_v5\
-MDK\ARM\Packs\Keil\STM32L4xx_DFP\2.6.1\Drivers\CMSIS\Device\ST\STM32L4xx\Includ
+   66 000001DC                 api_item         oled_flush,35,FUNC ;
+   12 000001DC                 EXPORT           oled_flush
+   13 000001DC         oled_flush
+                               PROC
+   14 000001DC F8DF C00C       LDR              r12, =table_ptr ; 加载API表�
+                                                            ��针地址
+   15 000001E0 F8DC C000       LDR              r12, [r12]  ; 获取API表实�
+                                                            �地址
 
 
 
 ARM Macro Assembler    Page 11 
 
 
-e -IC:\Keil_v5\MDK\ARM\CMSIS\Include --predefine="__UVISION_VERSION SETA 529" -
--predefine="STM32L431xx SETA 1" --list=.\listings\api_table.lst api_table.s
+   16 000001E4         
+   17 000001E4                 IF               "FUNC" == "FUNC"
+   18 000001E4         ; 函数处理：跳转到目标函数
+   19 000001E4 F8DC C08C       LDR              r12, [r12, #4*35]
+   20 000001E8 4760            BX               r12
+   21 000001EA                 ELSE
+   25                          ENDIF
+   26 000001EA                 ENDP
+   67 000001EA         ; ...省略其它api定义...
+   68 000001EA         
+   69 000001EA 00 00           ALIGN            4
+   70 000001EC                 END
+              2000BFFC 
+Command Line: --xref --diag_suppress=9931 --cpu=Cortex-M4 --fpu=SoftVFP --depen
+d=.\objects\api_table.d -o.\objects\api_table.o -I.\RTE\_Target_1 -IC:\Keil_v5\
+MDK\ARM\Packs\Keil\STM32L4xx_DFP\2.6.1\Drivers\CMSIS\Device\ST\STM32L4xx\Includ
+e -IC:\Keil_v5\MDK\ARM\CMSIS\Include --predefine="__MICROLIB SETA 1" --predefin
+e="__UVISION_VERSION SETA 529" --predefine="STM32L431xx SETA 1" --list=.\listin
+gs\api_table.lst api_table.s
 
 
 
@@ -934,6 +951,16 @@ Symbol: oledBuffer_sysVar
       At line 12 in macro api_item
       at line 65 in file api_table.s
 Comment: oledBuffer_sysVar used once
+oled_flush 000001DC
+
+Symbol: oled_flush
+   Definitions
+      At line 13 in macro api_item
+      at line 66 in file api_table.s
+   Uses
+      At line 12 in macro api_item
+      at line 66 in file api_table.s
+Comment: oled_flush used once
 openLSM6DSM 000000C4
 
 Symbol: openLSM6DSM
@@ -971,6 +998,12 @@ Symbol: smallFont_sysVar
       At line 13 in macro api_item
       at line 61 in file api_table.s
    Uses
+
+
+
+ARM Macro Assembler    Page 6 Alphabetic symbol ordering
+Relocatable symbols
+
       At line 12 in macro api_item
       at line 61 in file api_table.s
 Comment: smallFont_sysVar used once
@@ -981,12 +1014,6 @@ Symbol: stopwatch_active
       At line 13 in macro api_item
       at line 49 in file api_table.s
    Uses
-
-
-
-ARM Macro Assembler    Page 6 Alphabetic symbol ordering
-Relocatable symbols
-
       At line 12 in macro api_item
       at line 49 in file api_table.s
 Comment: stopwatch_active used once
@@ -1036,11 +1063,17 @@ Symbol: watchFace_switchUpdate
    Definitions
       At line 13 in macro api_item
       at line 52 in file api_table.s
+
+
+
+ARM Macro Assembler    Page 7 Alphabetic symbol ordering
+Relocatable symbols
+
    Uses
       At line 12 in macro api_item
       at line 52 in file api_table.s
 Comment: watchFace_switchUpdate used once
-35 symbols
+36 symbols
 
 
 
@@ -1057,4 +1090,4 @@ Symbol: table_ptr
       at line 32 in file api_table.s
 Comment: table_ptr used once
 1 symbol
-370 symbols in table
+372 symbols in table

@@ -23,8 +23,9 @@ void random_drawStars(void);
 //watch face
 void my_main(void)
 {
+	systemVariableInit();
 	display_setDrawFunc(draw);
-		open_watchface_general(); // 通用的表盘打开函数
+	open_watchface_general(); // 通用的表盘打开函数
 	openLSM6DSM(LSM_ACC_GYRO);
 }
  

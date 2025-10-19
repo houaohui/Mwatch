@@ -188,7 +188,7 @@
             <hadIRAM2>1</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
-            <useUlib>0</useUlib>
+            <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
             <nSecure>0</nSecure>
@@ -319,8 +319,8 @@
             <Strict>0</Strict>
             <EnumInt>0</EnumInt>
             <PlainCh>0</PlainCh>
-            <Ropi>0</Ropi>
-            <Rwpi>0</Rwpi>
+            <Ropi>1</Ropi>
+            <Rwpi>1</Rwpi>
             <wLevel>3</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
@@ -343,8 +343,8 @@
           </Cads>
           <Aads>
             <interw>1</interw>
-            <Ropi>0</Ropi>
-            <Rwpi>0</Rwpi>
+            <Ropi>1</Ropi>
+            <Rwpi>1</Rwpi>
             <thumb>0</thumb>
             <SplitLS>0</SplitLS>
             <SwStkChk>0</SwStkChk>
@@ -361,15 +361,15 @@
           </Aads>
           <LDads>
             <umfTarg>0</umfTarg>
-            <Ropi>0</Ropi>
-            <Rwpi>0</Rwpi>
+            <Ropi>1</Ropi>
+            <Rwpi>1</Rwpi>
             <noStLib>0</noStLib>
             <RepFail>0</RepFail>
             <useFile>0</useFile>
             <TextAddressRange>0</TextAddressRange>
             <DataAddressRange>0</DataAddressRange>
             <pXoBase>0</pXoBase>
-            <ScatterFile>.\Objects\app-evasion.sct</ScatterFile>
+            <ScatterFile></ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc>--entry=my_main   --first=my_main  --no_startup</Misc>
